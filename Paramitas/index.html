@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramitas Cabañas de Montaña</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo de Paramitas Cabañas de Montaña">
+        </div>
+        <nav>
+            <a href="#">Nosotros</a>
+            <a href="#">Cabañas</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Sección de bienvenida -->
+    <section class="welcome-section">
+        <div class="welcome-text">
+            <h1>Sentí la energía de la montaña</h1>
+            <p>Bienvenidos a la energía de la montaña mendocina</p>
+            <a href="#" class="cta-button">Ver nuestras cabañas</a>
+        </div>
+        <div class="welcome-image">
+            <img src="main-image.jpg" alt="Imagen principal de cabaña en la montaña">
+        </div>
+    </section>
+
+    <section class="cabins-section">
+        <h2>Nuestras cabañas</h2>
+        
+        <!-- Contenedor del carrusel -->
+        <div class="carousel-container">
+            <button class="prev" onclick="moveCarousel(-1)">&#10094;</button> <!-- Botón anterior -->
+            
+            <div class="carousel">
+                <!-- Cards dentro del carrusel -->
+                <div class="card">
+                    <img src="cabin1.jpg" alt="Cabaña 1">
+                    <h3>Cabaña 1</h3>
+                    <p>Descripción breve de la cabaña.</p>
+                </div>
+                <div class="card">
+                    <img src="cabin2.jpg" alt="Cabaña 2">
+                    <h3>Cabaña 2</h3>
+                    <p>Descripción breve de la cabaña.</p>
+                </div>
+                <div class="card">
+                    <img src="cabin3.jpg" alt="Cabaña 3">
+                    <h3>Cabaña 3</h3>
+                    <p>Descripción breve de la cabaña.</p>
+                </div>
+                <div class="card">
+                    <img src="cabin4.jpg" alt="Cabaña 4">
+                    <h3>Cabaña 4</h3>
+                    <p>Descripción breve de la cabaña.</p>
+                </div>
+            </div>
+            
+            <button class="next" onclick="moveCarousel(1)">&#10095;</button> <!-- Botón siguiente -->
+        </div>
+        
+        <a href="#" class="see-more-button">Ver más</a>
+    </section>
+    
+    
+</body>
+</html>
