@@ -1,74 +1,302 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paramitas Cabañas de Montaña</title>
-    <script src="script.js" defer></script> 
-    <link href="./output.css" rel="stylesheet">
+    <title>Paramitas</title>
+    <!--<script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">-->
+    <link href="/src/output.css" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
-<body>
-    <!-- Encabezado -->
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="Logo de Paramitas Cabañas de Montaña">
+
+<body class="bg-[#F6F3EF] text-gray-800 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex items-center justify-between py-4 px-6">
+            <img src="logo.png" alt="Paramitas" class="h-10">
+            <nav class="space-x-8">
+                <a href="#cabanas" class="text-[#BA7F47] font-semibold hover:underline">Cabañas</a>
+                <a href="#nosotros" class="text-gray-700 hover:underline">Nosotros</a>
+                <a href="#contacto" class="text-gray-700 hover:underline">Contacto</a>
+            </nav>
         </div>
-        <nav>
-            <a href="#">Nosotros</a>
-            <a href="#">Cabañas</a>
-            <a href="#">Contacto</a>
-        </nav>
     </header>
 
-    <!-- Sección de bienvenida -->
-    <section class="welcome-section">
-        <div class="welcome-text">
-            <h1 class="bg-orange-500">Sentí la energía de la montaña</h1>
-            <p>Bienvenidos a la energía de la montaña mendocina</p>
-            <a href="#" class="cta-button">Ver nuestras cabañas</a>
-        </div>
-        <div class="welcome-image">
-            <img src="main-image.jpg" alt="Imagen principal de cabaña en la montaña">
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center min-h-[100vh]" style="background-image: url('/img/Hero.JPG');">
+        <div class="container mx-auto text-left px-8 py-32 text-beige-ppal"> <!-- Aumenté el padding con px-8 -->
+            <h1 class="text-4xl font-bold mb-6">Sentí la energía de la montaña</h1>
+            <!-- Agregué margen inferior mb-6 -->
+            <p class="mt-4 text-xl mb-6">Un lugar para desconectarte y renovarte</p>
+            <!-- Agregué margen inferior mb-6 -->
+            <a href="#cabanas"
+                class="inline-block bg-[#BA7F47] text-white font-bold py-3 px-6 mt-8 rounded-lg hover:bg-[#a66c3e]">Nuestras
+                Cabañas</a>
         </div>
     </section>
 
-    <section class="cabins-section">
-        <h2>Nuestras cabañas</h2>
-        
-        <!-- Contenedor del carrusel -->
-        <div class="carousel-container">
-            <button class="prev" onclick="moveCarousel(-1)">&#10094;</button> <!-- Botón anterior -->
-            
-            <div class="carousel">
-                <!-- Cards dentro del carrusel -->
-                <div class="card">
-                    <img src="cabin1.jpg" alt="Cabaña 1">
-                    <h3>Cabaña 1</h3>
-                    <p>Descripción breve de la cabaña.</p>
+
+    <!-- Content Wrapper -->
+    <main class="container mx-auto px-6 py-16">
+        <!-- Placeholder for sections -->
+        <div id="content">
+            <!-- ¿Para qué Paramitas? -->
+            <section class="bg-[#F6F3EF] py-16">
+                <div class="container mx-auto px-6 text-center">
+                    <h2 class="text-3xl font-bold text-[#BA7F47] mb-6">¿Para qué Paramitas?</h2>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-8">
+                        Somos seguidores de Lama Rinchen, monje tibetano. Paramitas significa "virtudes para liberarse
+                        del sufrimiento".<br>
+                        Un espacio de paz, armonía y renovación.
+                    </p>
+                    <div class="relative mx-auto max-w-4xl">
+                        <p class="relative text-gray-700 text-lg">Enfocados en la calma, el equilibrio y la conexión con
+                            la naturaleza.</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="cabin2.jpg" alt="Cabaña 2">
-                    <h3>Cabaña 2</h3>
-                    <p>Descripción breve de la cabaña.</p>
+            </section>
+            <!-- Nuestras Cabañas -->
+            <section id="cabanas" class="bg-white py-16">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl font-bold text-center text-[#BA7F47] mb-6">Nuestras cabañas</h2>
+                    <p class="text-gray-700 text-center text-lg mb-8">
+                        Conoce nuestras opciones de alojamiento diseñadas para brindarte confort y una conexión única
+                        con la naturaleza.
+                    </p>
+
+                    <!-- Carrusel de Cards -->
+                    <div class="relative">
+                        <!-- Contenedor de carrusel con overflow-x-auto -->
+                        <div class="overflow-x-auto flex">
+                            <div class="flex transition-transform duration-500 ease-in-out" id="carousel">
+                                <!-- Card 1 -->
+                                <div class="card w-full sm:w-1/2 lg:w-1/3 p-4 flex-shrink-0">
+                                    <div
+                                        class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                                        <img src="/img/cabana1.jpeg" alt="Cabaña Serenidad"
+                                            class="w-full h-48 object-cover">
+                                        <div class="p-6">
+                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Serenidad</h3>
+                                            <p class="text-gray-600 mt-2">Disfruta de la calma y el paisaje.</p>
+                                            <p class="mt-4 font-bold text-[#BA7F47]">$8,000/noche</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card 2 -->
+                                <div class="card w-full sm:w-1/2 lg:w-1/3 p-4 flex-shrink-0">
+                                    <div
+                                        class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                                        <img src="/img/cabana2.jpeg" alt="Cabaña Paz" class="w-full h-48 object-cover">
+                                        <div class="p-6">
+                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Paz</h3>
+                                            <p class="text-gray-600 mt-2">Perfecta para desconectarte.</p>
+                                            <p class="mt-4 font-bold text-[#BA7F47]">$7,500/noche</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card 3 -->
+                                <div class="card w-full sm:w-1/2 lg:w-1/3 p-4 flex-shrink-0">
+                                    <div
+                                        class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                                        <img src="/img/cabana3.jpeg" alt="Cabaña Armonía"
+                                            class="w-full h-48 object-cover">
+                                        <div class="p-6">
+                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Armonía</h3>
+                                            <p class="text-gray-600 mt-2">Ideal para familias.</p>
+                                            <p class="mt-4 font-bold text-[#BA7F47]">$9,000/noche</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card w-full sm:w-1/2 lg:w-1/3 p-4 flex-shrink-0">
+                                    <div
+                                        class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                                        <img src="/img/cabana2.jpeg" alt="Cabaña Paz" class="w-full h-48 object-cover">
+                                        <div class="p-6">
+                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Paz</h3>
+                                            <p class="text-gray-600 mt-2">Perfecta para desconectarte.</p>
+                                            <p class="mt-4 font-bold text-[#BA7F47]">$7,500/noche</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card 3 -->
+                                <div class="card w-full sm:w-1/2 lg:w-1/3 p-4 flex-shrink-0">
+                                    <div
+                                        class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                                        <img src="/img/cabana3.jpeg" alt="Cabaña Armonía"
+                                            class="w-full h-48 object-cover">
+                                        <div class="p-6">
+                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Armonía</h3>
+                                            <p class="text-gray-600 mt-2">Ideal para familias.</p>
+                                            <p class="mt-4 font-bold text-[#BA7F47]">$9,000/noche</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botones de navegación -->
+                        <button id="prevButton"
+                            class="absolute top-1/2 left-0 transform -translate-y-1/2 text-[#BA7F47] text-4xl hover:text-[#a66c3e] transition-colors">
+                            &#8592;
+                        </button>
+                        <button id="nextButton"
+                            class="absolute top-1/2 right-0 transform -translate-y-1/2 text-[#BA7F47] text-4xl hover:text-[#a66c3e] transition-colors">
+                            &#8594;
+                        </button>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="cabin3.jpg" alt="Cabaña 3">
-                    <h3>Cabaña 3</h3>
-                    <p>Descripción breve de la cabaña.</p>
+            </section>
+            <!-- Reservar Button -->
+            <div class="text-center mt-8">
+                <a href="https://wa.me/5492610000000?text=Hola,%20me%20interesa%20reservar%20una%20cabaña."
+                    class="bg-[#BA7F47] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#a66c3e]" target="_blank">
+                    Reservar
+                </a>
+            </div>
+        </div>
+        </section>
+        <!-- Nosotros -->
+        <section id="nosotros" class="bg-[#F6F3EF] py-16">
+            <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Texto -->
+                <div>
+                    <h2 class="text-3xl font-bold text-[#BA7F47] mb-6">Paramitas, nuestro lugar soñado</h2>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                        Convince your prospective clients to choose you and your offerings. Convince your prospective
+                        clients to choose you and your offerings.
+                    </p>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        Convince your prospective clients to choose you and your offerings. Convince prospective clients
+                        to choose you and your offerings.
+                    </p>
                 </div>
-                <div class="card">
-                    <img src="cabin4.jpg" alt="Cabaña 4">
-                    <h3>Cabaña 4</h3>
-                    <p>Descripción breve de la cabaña.</p>
+                <!-- Imagen -->
+                <div>
+                    <img src="nosotros/nosotros.jpg" alt="Nuestro lugar soñado"
+                        class="rounded-lg shadow-lg w-full object-cover h-[400px]">
                 </div>
             </div>
-            
-            <button class="next" onclick="moveCarousel(1)">&#10095;</button> <!-- Botón siguiente -->
+        </section>
+
+        <!-- Nuestros huéspedes -->
+        <section id="huespedes" class="bg-[#D9B177] py-16">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-white mb-8">Nuestros huéspedes</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Testimonio 1 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <p class="text-gray-700 italic mb-4">
+                            "Excelente lugar, la energía y la paz son increíbles. ¡Altamente recomendable!"
+                        </p>
+                        <div class="flex items-center justify-center">
+                            <img src="huespedes/huesped1.jpg" alt="Huésped 1"
+                                class="w-12 h-12 rounded-full object-cover mr-4">
+                            <div>
+                                <p class="font-bold text-gray-800">Juan Pérez</p>
+                                <p class="text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonio 2 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <p class="text-gray-700 italic mb-4">
+                            "El mejor lugar para desconectar y conectar con la naturaleza. ¡Volveré pronto!"
+                        </p>
+                        <div class="flex items-center justify-center">
+                            <img src="huespedes/huesped2.jpg" alt="Huésped 2"
+                                class="w-12 h-12 rounded-full object-cover mr-4">
+                            <div>
+                                <p class="font-bold text-gray-800">María Gómez</p>
+                                <p class="text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonio 3 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <p class="text-gray-700 italic mb-4">
+                            "Increíble atención y paisajes. ¡Una experiencia única que recomiendo!"
+                        </p>
+                        <div class="flex items-center justify-center">
+                            <img src="huespedes/huesped3.jpg" alt="Huésped 3"
+                                class="w-12 h-12 rounded-full object-cover mr-4">
+                            <div>
+                                <p class="font-bold text-gray-800">Carlos Ruiz</p>
+                                <p class="text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contacto y Mapa -->
+        <section id="contacto" class="bg-[#F6F3EF] py-16">
+            <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Información de Contacto -->
+                <div>
+                    <h2 class="text-3xl font-bold text-[#BA7F47] mb-6">Contáctanos</h2>
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex items-center">
+                            <span>+54 9 261 000 0000</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span>contacto@paramitas.com.ar</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span>Ruta 40, km 30, Mendoza, Argentina</span>
+                        </li>
+                    </ul>
+                    <!-- Redes Sociales -->
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-[#BA7F47] hover:text-[#8b5e33]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.989 4.388 10.936 10.125 11.854v-8.385h-3.047v-3.469h3.047v-2.636c0-3.021 1.792-4.687 4.533-4.687 1.313 0 2.686.236 2.686.236v2.953h-1.513c-1.49 0-1.957.928-1.957 1.879v2.255h3.328l-.531 3.469h-2.797v8.385c5.737-.918 10.125-5.865 10.125-11.854z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-[#BA7F47] hover:text-[#8b5e33]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M22.23 5.924a8.953 8.953 0 01-2.593.71A4.482 4.482 0 0021.675 4.1a8.965 8.965 0 01-2.85 1.09 4.475 4.475 0 00-7.617 3.147c0 .35.042.692.117 1.02a12.683 12.683 0 01-9.2-4.66 4.474 4.474 0 001.39 5.973 4.459 4.459 0 01-2.028-.563v.056a4.475 4.475 0 003.587 4.38 4.498 4.498 0 01-2.021.077 4.476 4.476 0 004.178 3.108 8.976 8.976 0 01-5.564 1.922c-.36 0-.717-.02-1.07-.062a12.676 12.676 0 006.92 2.027c8.3 0 12.833-6.883 12.833-12.833 0-.197-.005-.393-.013-.588a9.163 9.163 0 002.247-2.335z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-[#BA7F47] hover:text-[#8b5e33]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12-12-5.373-12-12 5.373-12 12-12zm0 22c5.514 0 10-4.486 10-10s-4.486-10-10-10-10 4.486-10 10 4.486 10 10 10zm1-15h-2v2h-1v2h1v6h2v-6h1v-2h-1v-2zm0-1v1h1v1h-1v-1h-1v1h-1v-1h1v-1h1z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mapa -->
+                <div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.1109739754346!2d-68.84440818468125!3d-32.88945998093839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e090d7f51b17d%3A0xa4f62b4de36bd08!2sParamitas%20Caba%C3%B1as%20de%20Montana!5e0!3m2!1sen!2sar!4v1691941267496!5m2!1sen!2sar"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" class="rounded-lg shadow-lg"></iframe>
+                </div>
+            </div>
+        </section>
+
         </div>
-        
-        <a href="#" class="see-more-button">Ver más</a>
-    </section>
-    
-    
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#BA7F47] text-white py-8">
+        <div class="container mx-auto flex flex-wrap justify-between items-center px-6">
+            <p>&copy; 2024 Paramitas Cabañas de Montaña. Todos los derechos reservados.</p>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-gray-300">Facebook</a>
+                <a href="#" class="hover:text-gray-300">Instagram</a>
+                <a href="#" class="hover:text-gray-300">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
