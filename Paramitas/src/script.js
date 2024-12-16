@@ -7,34 +7,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevButton = document.getElementById('prevButton');
     const nextButton = document.getElementById('nextButton');
     
-    const cardWidth = 100; // Ancho de la card en porcentaje (puede ajustarse si es en píxeles o con otros métodos)
-    let currentIndex = 0; // Índice de la card visible
-    
-    // Función para mover el carrusel
-    function moveCarousel() {
-        const offset = -currentIndex * cardWidth; // Desplazamiento basado en el índice actual
-        carousel.style.transform = `translateX(${offset}%)`;
+    const carousel = document.getElementById('carousel');
+
+    let currentIndex = 0;
+    const totalItems = carousel.children.length;
+
+    // Función para actualizar el desplazamiento del carrusel
+    function updateCarousel() {
+        const offset = -currentIndex * 100; // Ajuste para mover el carrusel (en porcentaje)
+        carousel.style.transform = `translateX(${offset}%)`; // Mueve el carrusel
     }
-    
-    // Botón de retroceder
+
+    // Acción de ir a la imagen anterior
     prevButton.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--; // Mover a la card anterior
-        } else {
-            currentIndex = 0; // No permitir que se mueva fuera del límite izquierdo
-        }
-        moveCarousel();
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems; // Permite retroceder al inicio
+        updateCarousel();
     });
-    
-    // Botón de avanzar
+
+    // Acción de ir a la imagen siguiente
     nextButton.addEventListener('click', () => {
-        const totalCards = document.querySelectorAll('.card').length;
-        if (currentIndex < totalCards - 1) {
-            currentIndex++; // Mover a la siguiente card
-        } else {
-            currentIndex = totalCards - 1; // No permitir que se mueva fuera del límite derecho
-        }
-        moveCarousel();
+        currentIndex = (currentIndex + 1) % totalItems; // Permite avanzar al final
+        updateCarousel();
     });
 
     let currentModalIndex = 0;
