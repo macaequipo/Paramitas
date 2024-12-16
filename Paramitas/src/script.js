@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Diccionario de fotos por cabaña
     const cabinPhotos = {
-        'Cabaña Serenidad': ['/src/img/cabana1-1.jpeg', '/scr/img/cabana1-2.jpeg', '/src/img/cabana1-3.jpeg'],
-        'Cabaña Paz': ['/src/img/cabana2-1.jpeg', '/src/img/cabana2-2.jpeg', '/src/img/cabana2-3.jpeg'],
-        'Cabaña Armonía': ['/src/img/cabana3-1.jpeg', '/src/img/cabana3-2.jpeg', '/src/img/cabana3-3.jpeg'],
+        'Cabaña Serenidad': ['/public/img/cabana1-1.jpeg', '/public/img/cabana1-2.jpeg', '/public/img/cabana1-3.jpeg'],
+        'Cabaña Paz': ['/public/img/cabana2-1.jpeg', '/public/img/cabana2-2.jpeg', '/public/img/cabana2-3.jpeg'],
+        'Cabaña Armonía': ['/public/img/cabana3-1.jpeg', '/public/img/cabana3-2.jpeg', '/public/img/cabana3-3.jpeg'],
     };
 
     // Mostrar el modal con las fotos correspondientes
