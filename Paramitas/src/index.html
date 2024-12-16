@@ -24,8 +24,9 @@
         </div>
     </header>
     <!-- Hero Section -->
-    <section class="relative bg-cover bg-center min-h-[100vh]" style="background-image: url('https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/Hero.jpg');">
-    <!-- <section class="relative bg-cover bg-center min-h-[100vh]" style="background-image: url('/Paramitas/src/img/Hero.jpg');"></section> -->
+    <section class="relative bg-cover bg-center min-h-[100vh]"
+        style="background-image: url('https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/Hero.jpg');">
+        <!-- <section class="relative bg-cover bg-center min-h-[100vh]" style="background-image: url('/Paramitas/src/img/Hero.jpg');"></section> -->
         <div class="container mx-auto text-left px-8 py-32 text-beige-ppal"> <!-- Aumenté el padding con px-8 -->
             <h1 class="text-4xl font-bold mb-6">Sentí la energía de la montaña</h1>
             <!-- Agregué margen inferior mb-6 -->
@@ -57,8 +58,7 @@
                     </div>
                 </div>
             </section>
-            <!-- Nuestras Cabañas -->
-            <section id="cabanas" class="bg-white py-16">
+        <section id="cabanas" class="bg-white py-16">
                 <div class="container mx-auto px-6">
                     <h2 class="text-3xl font-bold text-center text-[#BA7F47] mb-6">Nuestras cabañas</h2>
                     <p class="text-gray-700 text-center text-lg mb-8">
@@ -70,11 +70,13 @@
                     <div class="relative px-4 sm:px-6 lg:px-8">
                         <!-- Contenedor de carrusel con overflow-x-auto -->
                         <div class="overflow-x-auto flex">
-                            <div class="flex gap-4" id="carousel">
+                            <!-- Contenedor de las cards con espacio entre ellas -->
+                            <div class="flex gap-4 lg:gap-8" id="carousel">
                                 <!-- Card 1 -->
-                                <div class= "card w-full max-w-[300px] sm:max-w-[45%] lg:max-w-[30%] flex-shrink-0 p-2">
-                                    <div class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
-                                        <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/cabana1.jpeg" 
+                                <div class="card w-full sm:w-[45%] md:w-[30%] lg:w-[22%] flex-shrink-0 p-2">
+                                    <div
+                                        class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                                        <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/cabana1.jpeg"
                                             alt="Cabaña Serenidad" class="w-full h-48 object-cover">
                                         <div class="p-4">
                                             <h3 class="text-lg font-semibold text-[#BA7F47]">Cabaña Serenidad</h3>
@@ -83,83 +85,83 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                                <!-- Card 2 -->
-                                <div class="card w-full max-w-[300px] sm:max-w-[45%] lg:max-w-[30%] flex-shrink-0 p-2">
-                                    <div
-                                        class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
-                                        <!-- <img src="/img/cabana2.jpeg" alt="Cabaña Paz" class="w-full h-48 object-cover"> -->
-                                        <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/cabana2.jpeg" alt="Cabaña Paz" class="w-full h-48 object-cover">
-                                        <div class="p-6">
-                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Paz</h3>
-                                            <p class="text-gray-600 mt-2">Perfecta para desconectarte.</p>
-                                            <p class="mt-4 font-bold text-[#BA7F47]">$7,500/noche</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Card 3 -->
-                                <div class="card w-full max-w-[300px] sm:max-w-[45%] lg:max-w-[30%] flex-shrink-0 p-2">
-                                    <div
-                                        class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
-                                        <!-- <img src="/img/cabana2.jpeg" alt="Cabaña Armonía" -->
-                                        <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/cabana2.jpeg" alt="Cabaña Armonía"
-                                            class="w-full h-48 object-cover">
-                                        <div class="p-6">
-                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Armonía</h3>
-                                            <p class="text-gray-600 mt-2">Ideal para familias.</p>
-                                            <p class="mt-4 font-bold text-[#BA7F47]">$9,000/noche</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card w-full max-w-[300px] sm:max-w-[45%] lg:max-w-[30%] flex-shrink-0 p-2">
-                                    <div
-                                        class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
-                                        <!-- <img src="/img/cabana4.jpeg" alt="Cabaña Paz" class="w-full h-48 object-cover"> -->
-                                        <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/cabana4.jpeg" alt="Cabaña Paz" class="w-full h-48 object-cover">
-                                        <div class="p-6">
-                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Paz</h3>
-                                            <p class="text-gray-600 mt-2">Perfecta para desconectarte.</p>
-                                            <p class="mt-4 font-bold text-[#BA7F47]">$7,500/noche</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Card 4 -->
-                                <div class="card min-w-[75%] sm:min-w-[45%] lg:min-w-[30%] p-2 flex-shrink-0">
-                                    <div
-                                        class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
-                                        <!-- <img src="/img/cabana1.jpeg" alt="Cabaña Armonía" -->
-                                        <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/cabana1.jpeg" alt="Cabaña Armonía"
-                                        
-                                            class="w-full h-48 object-cover">
-                                        <div class="p-6">
-                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Armonía</h3>
-                                            <p class="text-gray-600 mt-2">Ideal para familias.</p>
-                                            <p class="mt-4 font-bold text-[#BA7F47]">$9,000/noche</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Botones de navegación -->
-                        <button id="prevButton"
-                            class="absolute top-1/2 left-0 transform -translate-y-1/2 text-[#BA7F47] text-4xl hover:text-[#a66c3e] transition-colors">
-                            &#8592;
-                        </button>
-                        <button id="nextButton"
-                            class="absolute top-1/2 right-0 transform -translate-y-1/2 text-[#BA7F47] text-4xl hover:text-[#a66c3e] transition-colors">
-                            &#8594;
-                        </button>
+                                <!-- Card 2 -->
+                                <div class="card w-full sm:w-[45%] md:w-[30%] lg:w-[22%] flex-shrink-0 p-2">
+                                    <div
+                                        class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                                        <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/cabana2.jpeg"
+                                            alt="Cabaña Paz" class="w-full h-48 object-cover">
+                                        <div class="p-6">
+                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Paz</h3>
+                                            <p class="text-gray-600 mt-2">Perfecta para desconectarte.</p>
+                                            <p class="mt-4 font-bold text-[#BA7F47]">$7,500/noche</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 3 -->
+                                <div class="card w-full sm:w-[45%] md:w-[30%] lg:w-[22%] flex-shrink-0 p-2">
+                                    <div
+                                        class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                                        <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/cabana3.jpeg"
+                                            alt="Cabaña Armonía" class="w-full h-48 object-cover">
+                                        <div class="p-6">
+                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Armonía</h3>
+                                            <p class="text-gray-600 mt-2">Ideal para familias.</p>
+                                            <p class="mt-4 font-bold text-[#BA7F47]">$9,000/noche</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 4 -->
+                                <div class="card w-full sm:w-[45%] md:w-[30%] lg:w-[22%] flex-shrink-0 p-2">
+                                    <div
+                                        class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                                        <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/cabana4.jpeg"
+                                            alt="Cabaña Paz" class="w-full h-48 object-cover">
+                                        <div class="p-6">
+                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Paz</h3>
+                                            <p class="text-gray-600 mt-2">Perfecta para desconectarte.</p>
+                                            <p class="mt-4 font-bold text-[#BA7F47]">$7,500/noche</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 5 -->
+                                <div class="card w-full sm:w-[45%] md:w-[30%] lg:w-[22%] flex-shrink-0 p-2">
+                                    <div
+                                        class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                                        <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/cabana5.jpeg"
+                                            alt="Cabaña Montaña" class="w-full h-48 object-cover">
+                                        <div class="p-6">
+                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Montaña</h3>
+                                            <p class="text-gray-600 mt-2">Escapada perfecta a la naturaleza.</p>
+                                            <p class="mt-4 font-bold text-[#BA7F47]">$8,500/noche</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        <!-- </div> -->
                     </div>
+
+                    <!-- Botones de navegación -->
+                    <button id="prevButton" class="absolute top-1/2 left-0 transform -translate-y-1/2 text-[#BA7F47] text-4xl hover:text-[#a66c3e] transition-colors">
+                        &#8592;
+                    </button>
+                    <button id="nextButton" class="absolute top-1/2 right-0 transform -translate-y-1/2 text-[#BA7F47] text-4xl hover:text-[#a66c3e] transition-colors">
+                        &#8594;
+                    </button>
                 </div>
-            </section>
-            <!-- Reservar Button -->
-            <div class="text-center mt-8">
-                <a href="https://wa.me/5492610000000?text=Hola,%20me%20interesa%20reservar%20una%20cabaña."
-                    class="bg-[#BA7F47] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#a66c3e]" target="_blank">
-                    Reservar
-                </a>
-            </div>
+        </section>
+        <!-- Reservar Button -->
+        <div class="text-center mt-8">
+            <a href="https://wa.me/5492610000000?text=Hola,%20me%20interesa%20reservar%20una%20cabaña."
+                class="bg-[#BA7F47] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#a66c3e]" target="_blank">
+                Reservar
+            </a>
+        </div>
         </div>
         </section>
         <!-- Nosotros -->
@@ -169,11 +171,13 @@
                 <div>
                     <h2 class="text-3xl font-bold text-[#BA7F47] mb-6">Paramitas, nuestro lugar soñado</h2>
                     <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                        Convince your prospective clients to choose you and your offerings. Convince your prospective
+                        Convince your prospective clients to choose you and your offerings. Convince your
+                        prospective
                         clients to choose you and your offerings.
                     </p>
                     <p class="text-gray-700 text-lg leading-relaxed">
-                        Convince your prospective clients to choose you and your offerings. Convince prospective clients
+                        Convince your prospective clients to choose you and your offerings. Convince prospective
+                        clients
                         to choose you and your offerings.
                     </p>
                 </div>
@@ -281,7 +285,7 @@
                 <!-- Mapa -->
                 <div>
                     <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.773773752297!2d-69.3368414!3d-32.5588824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x968769a64a961eb9%3A0xf8e74f00dbf15449!2sParamitas%20Caba%C3%B1as%20de%20Monta%C3%B1a!5e0!3m2!1ses!2sar!4v1734369471404!5m2!1ses!2sar"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.773773752297!2d-69.3368414!3d-32.5588824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x968769a64a961eb9%3A0xf8e74f00dbf15449!2sParamitas%20Caba%C3%B1as%20de%20Monta%C3%B1a!5e0!3m2!1ses!2sar!4v1734369471404!5m2!1ses!2sar"
                         width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade" class="rounded-lg shadow-lg"></iframe>
                 </div>
@@ -303,28 +307,28 @@
         </div>
     </footer>
     <!-- Modal para mostrar más fotos -->
-<div id="photoModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-    <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-4 relative">
-        <!-- Botón de cierre -->
-        <button id="closeModal"
-            class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 font-bold text-2xl">&times;</button>
+    <div id="photoModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-4 relative">
+            <!-- Botón de cierre -->
+            <button id="closeModal"
+                class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 font-bold text-2xl">&times;</button>
 
-        <!-- Contenedor del carrusel -->
-        <div id="modalCarousel" class="relative">
-            <div class="overflow-hidden">
-                <div class="flex transition-transform duration-500 ease-in-out" id="modalCarouselInner">
-                    <!-- Las imágenes del carrusel se agregarán dinámicamente -->
+            <!-- Contenedor del carrusel -->
+            <div id="modalCarousel" class="relative">
+                <div class="overflow-hidden">
+                    <div class="flex transition-transform duration-500 ease-in-out" id="modalCarouselInner">
+                        <!-- Las imágenes del carrusel se agregarán dinámicamente -->
+                    </div>
                 </div>
-            </div>
 
-            <!-- Botones de navegación -->
-            <button id="modalPrev"
-                class="absolute top-1/2 left-0 transform -translate-y-1/2 text-gray-500 text-3xl font-bold hover:text-gray-700">&larr;</button>
-            <button id="modalNext"
-                class="absolute top-1/2 right-0 transform -translate-y-1/2 text-gray-500 text-3xl font-bold hover:text-gray-700">&rarr;</button>
+                <!-- Botones de navegación -->
+                <button id="modalPrev"
+                    class="absolute top-1/2 left-0 transform -translate-y-1/2 text-gray-500 text-3xl font-bold hover:text-gray-700">&larr;</button>
+                <button id="modalNext"
+                    class="absolute top-1/2 right-0 transform -translate-y-1/2 text-gray-500 text-3xl font-bold hover:text-gray-700">&rarr;</button>
+            </div>
         </div>
     </div>
-</div>
 
 </body>
 
