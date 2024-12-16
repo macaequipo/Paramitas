@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paramitas</title>
-    <!--<script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">-->
     <link href="/src/output.css" rel="stylesheet">
     <script src="script.js"></script>
 </head>
@@ -297,6 +297,30 @@
             </div>
         </div>
     </footer>
+    <!-- Modal para mostrar más fotos -->
+<div id="photoModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-4 relative">
+        <!-- Botón de cierre -->
+        <button id="closeModal"
+            class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 font-bold text-2xl">&times;</button>
+
+        <!-- Contenedor del carrusel -->
+        <div id="modalCarousel" class="relative">
+            <div class="overflow-hidden">
+                <div class="flex transition-transform duration-500 ease-in-out" id="modalCarouselInner">
+                    <!-- Las imágenes del carrusel se agregarán dinámicamente -->
+                </div>
+            </div>
+
+            <!-- Botones de navegación -->
+            <button id="modalPrev"
+                class="absolute top-1/2 left-0 transform -translate-y-1/2 text-gray-500 text-3xl font-bold hover:text-gray-700">&larr;</button>
+            <button id="modalNext"
+                class="absolute top-1/2 right-0 transform -translate-y-1/2 text-gray-500 text-3xl font-bold hover:text-gray-700">&rarr;</button>
+        </div>
+    </div>
+</div>
+
 </body>
 
 </html>
