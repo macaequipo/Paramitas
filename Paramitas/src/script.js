@@ -12,12 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
     const totalItems = carousel.children.length;
 
-    // Función para actualizar el desplazamiento del carrusel
+    // Función para actualizar el desplazamiento del carrusel de cards
     function updateCarousel() {
-        const offset = -currentIndex * 100; // Ajuste para mover el carrusel (en porcentaje)
-        carousel.style.transform = `translateX(${offset}%)`; // Mueve el carrusel
+        const cardWidth = carousel.querySelector('.card').offsetWidth; // Obtén el ancho de una card
+        const offset = -currentIndex * cardWidth; // Desplazamiento basado en el ancho de una card
+        carousel.style.transform = `translateX(${offset}px)`; // Mueve el carrusel
     }
-
+    
     // Acción de ir a la imagen anterior
     prevButton.addEventListener('click', () => {
         currentIndex = (currentIndex - 1 + totalItems) % totalItems; // Permite retroceder al inicio
