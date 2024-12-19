@@ -12,7 +12,10 @@ module.exports = {
         'marron-medio': '#C2B7A5',
         'marron': '#B3907A',
         'marron-oscuro': '#84604E',
-      }
+      },
+      fontFamily: {
+        'noir-pro': ['"Noir Pro"'],
+      },
     },
   },
   plugins: [],
