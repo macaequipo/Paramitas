@@ -205,49 +205,111 @@
         <section id="huespedes" class="bg-[#D9B177] py-16">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl font-bold text-white mb-8">Nuestros huéspedes</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Testimonio 1 -->
-                    <div class="bg-white rounded-lg shadow-lg p-6">
-                        <p class="text-gray-700 italic mb-4">
-                            "Excelente lugar, la energía y la paz son increíbles. ¡Altamente recomendable!"
-                        </p>
-                        <div class="flex items-center justify-center">
-                            <img src="huespedes/huesped1.jpg" alt="Huésped 1"
-                                class="w-12 h-12 rounded-full object-cover mr-4">
-                            <div>
-                                <p class="font-bold text-gray-800">Juan Pérez</p>
-                                <p class="text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
+                <div class="relative">
+                    <!-- Contenedor de carrusel con overflow-x-auto -->
+                    <div class="overflow-x-auto flex" id="reviewsCarousel">
+                        <!-- Contenedor de las cards con espacio entre ellas -->
+                        <div class="flex gap-4 lg:gap-8 transition-transform duration-500 ease-in-out">
+                            <!-- Testimonio 1 -->
+                            <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-full max-w-[300px] sm:max-w-[45%] lg:max-w-[30%]">
+                                <p class="text-gray-700 italic mb-4">
+                                    "Un lugar maravilloso, la atención es excelente y las instalaciones son de primera."
+                                </p>
+                                <div class="flex items-center justify-center">
+                                    <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/resena.jpeg" alt="Google Review"
+                                        class="w-12 h-12 rounded-full object-cover mr-4">
+                                    <div>
+                                        <p class="font-bold text-gray-800">Google User</p>
+                                        <p class="text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
+                                    </div>
+                                </div>
+                                <a href="https://g.co/kgs/Mj7xBZg" class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
+                            </div>
+                            <!-- Testimonio 2 -->
+                            <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-full max-w-[300px] sm:max-w-[45%] lg:max-w-[30%]">
+                                <p class="text-gray-700 italic mb-4">
+                                    "Un lugar maravilloso, la atención es excelente y las instalaciones son de primera."
+                                </p>
+                                <div class="flex items-center justify-center">
+                                    <img src="https://via.placeholder.com/40" alt="Google Review"
+                                        class="w-12 h-12 rounded-full object-cover mr-4">
+                                    <div>
+                                        <p class="font-bold text-gray-800">Google User</p>
+                                        <p class="text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
+                                    </div>
+                                </div>
+                                <a href="https://g.co/kgs/Mj7xBZg" class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
+                            </div>
+                            <!-- Testimonio 3 -->
+                            <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-full max-w-[300px] sm:max-w-[45%] lg:max-w-[30%]">
+                                <p class="text-gray-700 italic mb-4">
+                                    "Un lugar maravilloso, la atención es excelente y las instalaciones son de primera."
+                                </p>
+                                <div class="flex items-center justify-center">
+                                    <img src="https://via.placeholder.com/40" alt="Google Review"
+                                        class="w-12 h-12 rounded-full object-cover mr-4">
+                                    <div>
+                                        <p class="font-bold text-gray-800">Google User</p>
+                                        <p class="text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
+                                    </div>
+                                </div>
+                                <a href="https://g.co/kgs/Mj7xBZg" class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
+                            </div>
+                             <!-- Testimonio 4 -->
+                            <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-full max-w-[300px] sm:max-w-[45%] lg:max-w-[30%]">
+                                <p class="text-gray-700 italic mb-4">
+                                    "Un lugar maravilloso, la atención es excelente y las instalaciones son de primera."
+                                </p>
+                                <div class="flex items-center justify-center">
+                                    <img src="https://via.placeholder.com/40" alt="Google Review"
+                                        class="w-12 h-12 rounded-full object-cover mr-4">
+                                    <div>
+                                        <p class="font-bold text-gray-800">Google User</p>
+                                        <p class="text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
+                                    </div>
+                                </div>
+                                <a href="https://g.co/kgs/Mj7xBZg" class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
+                            </div>
+                             <!-- Testimonio 5 -->
+                             <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-full max-w-[300px] sm:max-w-[45%] lg:max-w-[30%]">
+                                <p class="text-gray-700 italic mb-4">
+                                    "Un lugar maravilloso, la atención es excelente y las instalaciones son de primera."
+                                </p>
+                                <div class="flex items-center justify-center">
+                                    <img src="https://via.placeholder.com/40" alt="Google Review"
+                                        class="w-12 h-12 rounded-full object-cover mr-4">
+                                    <div>
+                                        <p class="font-bold text-gray-800">Google User</p>
+                                        <p class="text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
+                                    </div>
+                                </div>
+                                <a href="https://g.co/kgs/Mj7xBZg" class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
+                            </div>
+                             <!-- Testimonio 6  -->
+                             <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-full max-w-[300px] sm:max-w-[45%] lg:max-w-[30%]">
+                                <p class="text-gray-700 italic mb-4">
+                                    "Un lugar maravilloso, la atención es excelente y las instalaciones son de primera."
+                                </p>
+                                <div class="flex items-center justify-center">
+                                    <img src="https://via.placeholder.com/40" alt="Google Review"
+                                        class="w-12 h-12 rounded-full object-cover mr-4">
+                                    <div>
+                                        <p class="font-bold text-gray-800">Google User</p>
+                                        <p class="text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
+                                    </div>
+                                </div>
+                                <a href="https://g.co/kgs/Mj7xBZg" class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
                             </div>
                         </div>
                     </div>
-                    <!-- Testimonio 2 -->
-                    <div class="bg-white rounded-lg shadow-lg p-6">
-                        <p class="text-gray-700 italic mb-4">
-                            "El mejor lugar para desconectar y conectar con la naturaleza. ¡Volveré pronto!"
-                        </p>
-                        <div class="flex items-center justify-center">
-                            <img src="huespedes/huesped2.jpg" alt="Huésped 2"
-                                class="w-12 h-12 rounded-full object-cover mr-4">
-                            <div>
-                                <p class="font-bold text-gray-800">María Gómez</p>
-                                <p class="text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Testimonio 3 -->
-                    <div class="bg-white rounded-lg shadow-lg p-6">
-                        <p class="text-gray-700 italic mb-4">
-                            "Increíble atención y paisajes. ¡Una experiencia única que recomiendo!"
-                        </p>
-                        <div class="flex items-center justify-center">
-                            <img src="huespedes/huesped3.jpg" alt="Huésped 3"
-                                class="w-12 h-12 rounded-full object-cover mr-4">
-                            <div>
-                                <p class="font-bold text-gray-800">Carlos Ruiz</p>
-                                <p class="text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
-                            </div>
-                        </div>
-                    </div>
+                   
+                    
+                      <!-- Testimonio 6 -->
+                    <!-- Botones de navegación -->
+                    <button id="reviewsPrevButton" class="absolute top-1/2 left-0 transform -translate-y-1/2 text-[#BA7F47] text-4xl hover:text-[#a66c3e] transition-colors">
+                        &#8592;</button>
+                    <button id="reviewsNextButton" class="absolute top-1/2 right-0 transform -translate-y-1/2 text-[#BA7F47] text-4xl hover:text-[#a66c3e] transition-colors">
+                        &#8594;</button>
                 </div>
             </div>
         </section>
@@ -271,21 +333,21 @@
                     <!-- Redes Sociales -->
                     <div class="flex space-x-4 mt-6">
                         <a href="#" class="text-[#BA7F47] hover:text-[#8b5e33]">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor"
+                            <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/instagram.png" class="w-6 h-6" fill="currentColor"
                                 viewBox="0 0 24 24">
                                 <path
                                     d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.989 4.388 10.936 10.125 11.854v-8.385h-3.047v-3.469h3.047v-2.636c0-3.021 1.792-4.687 4.533-4.687 1.313 0 2.686.236 2.686.236v2.953h-1.513c-1.49 0-1.957.928-1.957 1.879v2.255h3.328l-.531 3.469h-2.797v8.385c5.737-.918 10.125-5.865 10.125-11.854z" />
                             </svg>
                         </a>
                         <a href="#" class="text-[#BA7F47] hover:text-[#8b5e33]">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor"
+                            <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/facebook.png" class="w-6 h-6" fill="currentColor"
                                 viewBox="0 0 24 24">
                                 <path
                                     d="M22.23 5.924a8.953 8.953 0 01-2.593.71A4.482 4.482 0 0021.675 4.1a8.965 8.965 0 01-2.85 1.09 4.475 4.475 0 00-7.617 3.147c0 .35.042.692.117 1.02a12.683 12.683 0 01-9.2-4.66 4.474 4.474 0 001.39 5.973 4.459 4.459 0 01-2.028-.563v.056a4.475 4.475 0 003.587 4.38 4.498 4.498 0 01-2.021.077 4.476 4.476 0 004.178 3.108 8.976 8.976 0 01-5.564 1.922c-.36 0-.717-.02-1.07-.062a12.676 12.676 0 006.92 2.027c8.3 0 12.833-6.883 12.833-12.833 0-.197-.005-.393-.013-.588a9.163 9.163 0 002.247-2.335z" />
                             </svg>
                         </a>
                         <a href="#" class="text-[#BA7F47] hover:text-[#8b5e33]">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor"
+                            <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/whatsapp.png" class="w-6 h-6" fill="currentColor"
                                 viewBox="0 0 24 24">
                                 <path
                                     d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12-12-5.373-12-12 5.373-12 12-12zm0 22c5.514 0 10-4.486 10-10s-4.486-10-10-10-10 4.486-10 10 4.486 10 10 10zm1-15h-2v2h-1v2h1v6h2v-6h1v-2h-1v-2zm0-1v1h1v1h-1v-1h-1v1h-1v-1h1v-1h1z" />
