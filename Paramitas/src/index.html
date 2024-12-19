@@ -8,10 +8,26 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!--<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">-->
     <link href="/src/output.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Noir Pro';
+            src: url('/fonts/NoirPro-Regular.woff2') format('woff2'),
+                 url('/fonts/NoirPro-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Noir Pro';
+            src: url('/fonts/NoirPro-Bold.woff2') format('woff2'),
+                 url('/fonts/NoirPro-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+        }
+    </style>
     <script src="script.js"></script>
 </head>
 
-<body class="bg-[#F6F3EF] text-gray-800 font-sans">
+<body class="bg-[#F6F3EF] text-gray-800 font-noir-pro">
     <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto flex items-center justify-between py-4 px-6">
@@ -41,7 +57,7 @@
 
 
     <!-- Content Wrapper -->
-    <main class="container mx-auto px-6 py-16">
+    <main class="container mx-auto px-6 py-16 font-noir-pro">
         <!-- Placeholder for sections -->
         <div id="content">
             <!-- ¿Para qué Paramitas? -->
@@ -80,9 +96,9 @@
                                     <div class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-1000 ease-in-out hover:scale-105 hover:shadow-2xl"
                                         id="carousel">
                                         <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/cabana1.jpeg"
-                                            alt="Cabaña Serenidad" class="w-full h-48 object-cover">
+                                            alt="Cabaña Paciencia" class="w-full h-48 object-cover">
                                         <div class="p-4">
-                                            <h3 class="text-lg font-semibold text-[#BA7F47]">Cabaña Serenidad</h3>
+                                            <h3 class="text-lg font-semibold text-[#BA7F47]">Cabaña Paciencia</h3>
                                             <p class="text-gray-600 mt-1">Disfruta de la calma y el paisaje.</p>
                                             <p class="mt-2 font-bold text-[#BA7F47]">$8,000/noche</p>
                                         </div>
@@ -95,9 +111,9 @@
                                     <div class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-1000 ease-in-out hover:scale-105 hover:shadow-2xl"
                                         id="carousel">
                                         <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/cabana2.jpeg"
-                                            alt="Cabaña Paz" class="w-full h-48 object-cover">
+                                            alt="Cabaña Conducta" class="w-full h-48 object-cover">
                                         <div class="p-6">
-                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Paz</h3>
+                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Conducta</h3>
                                             <p class="text-gray-600 mt-2">Perfecta para desconectarte.</p>
                                             <p class="mt-4 font-bold text-[#BA7F47]">$7,500/noche</p>
                                         </div>
@@ -110,9 +126,9 @@
                                     <div class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-1000 ease-in-out hover:scale-105 hover:shadow-2xl"
                                         id="carousel">
                                         <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/cabana3.jpeg"
-                                            alt="Cabaña Armonía" class="w-full h-48 object-cover">
+                                            alt="Cabaña Generosidad" class="w-full h-48 object-cover">
                                         <div class="p-6">
-                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Armonía</h3>
+                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Generosidad</h3>
                                             <p class="text-gray-600 mt-2">Ideal para familias.</p>
                                             <p class="mt-4 font-bold text-[#BA7F47]">$9,000/noche</p>
                                         </div>
@@ -125,9 +141,9 @@
                                     <div class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-1000 ease-in-out hover:scale-105 hover:shadow-2xl"
                                         id="carousel">
                                         <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/cabana4.jpeg"
-                                            alt="Cabaña Paz" class="w-full h-48 object-cover">
+                                            alt="Cabaña Entusiasmo" class="w-full h-48 object-cover">
                                         <div class="p-6">
-                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Paz</h3>
+                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Entusiasmo</h3>
                                             <p class="text-gray-600 mt-2">Perfecta para desconectarte.</p>
                                             <p class="mt-4 font-bold text-[#BA7F47]">$7,500/noche</p>
                                         </div>
@@ -140,9 +156,23 @@
                                     <div class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl"
                                         id="carousel">
                                         <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/cabana5.jpeg"
-                                            alt="Cabaña Montaña" class="w-full h-48 object-cover">
+                                            alt="Cabaña Meditación" class="w-full h-48 object-cover">
                                         <div class="p-6">
-                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Montaña</h3>
+                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Meditación</h3>
+                                            <p class="text-gray-600 mt-2">Escapada perfecta a la naturaleza.</p>
+                                            <p class="mt-4 font-bold text-[#BA7F47]">$8,500/noche</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Card 6-->
+                                <div class="card w-full max-w-[300px] sm:max-w-[45%] lg:max-w-[30%] flex-shrink-0 p-2"
+                                    class="card w-[300px] flex-shrink-0">
+                                    <div class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl"
+                                        id="carousel">
+                                        <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/cabana5.jpeg"
+                                            alt="Cabaña Sabiduría" class="w-full h-48 object-cover">
+                                        <div class="p-6">
+                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Sabiduría</h3>
                                             <p class="text-gray-600 mt-2">Escapada perfecta a la naturaleza.</p>
                                             <p class="mt-4 font-bold text-[#BA7F47]">$8,500/noche</p>
                                         </div>
@@ -169,7 +199,7 @@
             </section>
             <!-- Reservar Button -->
             <div class="text-center mt-8">
-                <a href="https://wa.me/5492610000000?text=Hola,%20me%20interesa%20reservar%20una%20cabaña."
+                <a href="https://wa.me/5493496418252?text=Hola,%20me%20interesa%20reservar%20una%20cabaña."
                     class="bg-[#BA7F47] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#a66c3e]" target="_blank">
                     Reservar
                 </a>
@@ -181,22 +211,24 @@
             <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <!-- Texto -->
                 <div>
-                    <h2 class="text-3xl font-bold text-[#BA7F47] mb-6">Paramitas, nuestro lugar soñado</h2>
+                    <h2 class="text-5xl font-bold text-[#BA7F47] mb-6">Paramitas, nuestro lugar soñado</h2>
                     <p class="text-gray-700 text-lg leading-relaxed mb-6">
                         Convince your prospective clients to choose you and your offerings. Convince your
-                        prospective
-                        clients to choose you and your offerings.
+                        prospective clients to choose you and your offerings.
                     </p>
                     <p class="text-gray-700 text-lg leading-relaxed">
                         Convince your prospective clients to choose you and your offerings. Convince prospective
-                        clients
-                        to choose you and your offerings.
+                        clients to choose you and your offerings.
                     </p>
                 </div>
-                <!-- Imagen -->
-                <div>
-                    <img src="nosotros/nosotros.jpg" alt="Nuestro lugar soñado"
-                        class="rounded-lg shadow-lg w-full object-cover h-[400px]">
+                <!-- Imagenes -->
+                <div class="space-y-4">
+                    <img src="/public/img/cabana1-1.jpeg" alt="Nuestro lugar soñado 1"
+                        class="rounded-lg shadow-lg w-full object-cover h-[200px]">
+                    <img src="/public/img/cabana1-2.jpeg" alt="Nuestro lugar soñado 2"
+                        class="rounded-lg shadow-lg w-full object-cover h-[200px]">
+                    <img src="/public/img/cabana1-3.jpeg" alt="Nuestro lugar soñado 3"
+                        class="rounded-lg shadow-lg w-full object-cover h-[200px]">
                 </div>
             </div>
         </section>
@@ -211,37 +243,42 @@
                         <!-- Contenedor de las cards con espacio entre ellas -->
                         <div class="flex gap-4 lg:gap-8 transition-transform duration-500 ease-in-out">
                             <!-- Testimonio 1 -->
-                            <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-full max-w-[300px] sm:max-w-[45%] lg:max-w-[30%]">
+                            <div
+                                class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-full max-w-[300px] sm:max-w-[45%] lg:max-w-[30%]">
                                 <p class="text-gray-700 italic mb-4">
                                     "Un lugar maravilloso, la atención es excelente y las instalaciones son de primera."
                                 </p>
                                 <div class="flex items-center justify-center">
-                                    <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/resena.png" alt="Google Review"
-                                        class="w-12 h-12 rounded-full object-cover mr-4">
+                                    <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/resena.png"
+                                        alt="Google Review" class="w-12 h-12 rounded-full object-cover mr-4">
                                     <div>
                                         <p class="font-bold text-gray-800">Google User</p>
                                         <p class="text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
                                     </div>
                                 </div>
-                                <a href="https://g.co/kgs/Mj7xBZg" class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
+                                <a href="https://g.co/kgs/Mj7xBZg"
+                                    class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
                             </div>
                             <!-- Testimonio 2 -->
-                            <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-full max-w-[300px] sm:max-w-[45%] lg:max-w-[30%]">
+                            <div
+                                class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-full max-w-[300px] sm:max-w-[45%] lg:max-w-[30%]">
                                 <p class="text-gray-700 italic mb-4">
                                     "Un lugar maravilloso, la atención es excelente y las instalaciones son de primera."
                                 </p>
                                 <div class="flex items-center justify-center">
-                                    <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/resena.png" alt="Google Review"
-                                        class="w-12 h-12 rounded-full object-cover mr-4">
+                                    <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/resena.png"
+                                        alt="Google Review" class="w-12 h-12 rounded-full object-cover mr-4">
                                     <div>
                                         <p class="font-bold text-gray-800">Google User</p>
                                         <p class="text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
                                     </div>
                                 </div>
-                                <a href="https://g.co/kgs/Mj7xBZg" class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
+                                <a href="https://g.co/kgs/Mj7xBZg"
+                                    class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
                             </div>
                             <!-- Testimonio 3 -->
-                            <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-full max-w-[300px] sm:max-w-[45%] lg:max-w-[30%]">
+                            <div
+                                class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-full max-w-[300px] sm:max-w-[45%] lg:max-w-[30%]">
                                 <p class="text-gray-700 italic mb-4">
                                     "Un lugar maravilloso, la atención es excelente y las instalaciones son de primera."
                                 </p>
@@ -253,59 +290,68 @@
                                         <p class="text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
                                     </div>
                                 </div>
-                                <a href="https://g.co/kgs/Mj7xBZg" class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
+                                <a href="https://g.co/kgs/Mj7xBZg"
+                                    class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
                             </div>
-                             <!-- Testimonio 4 -->
-                            <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-full max-w-[300px] sm:max-w-[45%] lg:max-w-[30%]">
+                            <!-- Testimonio 4 -->
+                            <div
+                                class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-full max-w-[300px] sm:max-w-[45%] lg:max-w-[30%]">
                                 <p class="text-gray-700 italic mb-4">
                                     "Un lugar maravilloso, la atención es excelente y las instalaciones son de primera."
                                 </p>
                                 <div class="flex items-center justify-center">
-                                    <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/resena.png" alt="Google Review"
-                                        class="w-12 h-12 rounded-full object-cover mr-4">
+                                    <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/resena.png"
+                                        alt="Google Review" class="w-12 h-12 rounded-full object-cover mr-4">
                                     <div>
                                         <p class="font-bold text-gray-800">Google User</p>
                                         <p class="text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
                                     </div>
                                 </div>
-                                <a href="https://g.co/kgs/Mj7xBZg" class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
+                                <a href="https://g.co/kgs/Mj7xBZg"
+                                    class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
                             </div>
-                             <!-- Testimonio 5 -->
-                             <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-full max-w-[300px] sm:max-w-[45%] lg:max-w-[30%]">
+                            <!-- Testimonio 5 -->
+                            <div
+                                class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-full max-w-[300px] sm:max-w-[45%] lg:max-w-[30%]">
                                 <p class="text-gray-700 italic mb-4">
                                     "Un lugar maravilloso, la atención es excelente y las instalaciones son de primera."
                                 </p>
                                 <div class="flex items-center justify-center">
-                                    <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/resena.png" alt="Google Review"
-                                        class="w-12 h-12 rounded-full object-cover mr-4">
+                                    <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/resena.png"
+                                        alt="Google Review" class="w-12 h-12 rounded-full object-cover mr-4">
                                     <div>
                                         <p class="font-bold text-gray-800">Google User</p>
                                         <p class="text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
                                     </div>
                                 </div>
-                                <a href="https://g.co/kgs/Mj7xBZg" class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
+                                <a href="https://g.co/kgs/Mj7xBZg"
+                                    class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
                             </div>
-                             <!-- Testimonio 6  -->
-                             <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-full max-w-[300px] sm:max-w-[45%] lg:max-w-[30%]">
+                            <!-- Testimonio 6  -->
+                            <div
+                                class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-full max-w-[300px] sm:max-w-[45%] lg:max-w-[30%]">
                                 <p class="text-gray-700 italic mb-4">
                                     "Un lugar maravilloso, la atención es excelente y las instalaciones son de primera."
                                 </p>
                                 <div class="flex items-center justify-center">
-                                    <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/resena.png" alt="Google Review"
-                                        class="w-12 h-12 rounded-full object-cover mr-4">
+                                    <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/resena.png"
+                                        alt="Google Review" class="w-12 h-12 rounded-full object-cover mr-4">
                                     <div>
                                         <p class="font-bold text-gray-800">Google User</p>
                                         <p class="text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
                                     </div>
                                 </div>
-                                <a href="https://g.co/kgs/Mj7xBZg" class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
+                                <a href="https://g.co/kgs/Mj7xBZg"
+                                    class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
                             </div>
                         </div>
                     </div>
                     <!-- Botones de navegación -->
-                    <button id="reviewsPrevButton" class="absolute top-1/2 left-0 transform -translate-y-1/2 text-[#BA7F47] text-4xl hover:text-[#a66c3e] transition-colors">
+                    <button id="reviewsPrevButton"
+                        class="absolute top-1/2 left-0 transform -translate-y-1/2 text-[#BA7F47] text-4xl hover:text-[#a66c3e] transition-colors">
                         &#8592;</button>
-                    <button id="reviewsNextButton" class="absolute top-1/2 right-0 transform -translate-y-1/2 text-[#BA7F47] text-4xl hover:text-[#a66c3e] transition-colors">
+                    <button id="reviewsNextButton"
+                        class="absolute top-1/2 right-0 transform -translate-y-1/2 text-[#BA7F47] text-4xl hover:text-[#a66c3e] transition-colors">
                         &#8594;</button>
                 </div>
             </div>
@@ -330,24 +376,24 @@
                     <!-- Redes Sociales -->
                     <div class="flex space-x-4 mt-6">
                         <a href="#" class="text-[#BA7F47] hover:text-[#8b5e33]">
-                            <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/instagram.png" class="w-6 h-6" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.989 4.388 10.936 10.125 11.854v-8.385h-3.047v-3.469h3.047v-2.636c0-3.021 1.792-4.687 4.533-4.687 1.313 0 2.686.236 2.686.236v2.953h-1.513c-1.49 0-1.957.928-1.957 1.879v2.255h3.328l-.531 3.469h-2.797v8.385c5.737-.918 10.125-5.865 10.125-11.854z" />
+                            <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/instagram.png"
+                                class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.989 4.388 10.936 10.125 11.854v-8.385h-3.047v-3.469h3.047v-2.636c0-3.021 1.792-4.687 4.533-4.687 1.313 0 2.686.236 2.686.236v2.953h-1.513c-1.49 0-1.957.928-1.957 1.879v2.255h3.328l-.531 3.469h-2.797v8.385c5.737-.918 10.125-5.865 10.125-11.854z" />
                             </svg>
                         </a>
                         <a href="#" class="text-[#BA7F47] hover:text-[#8b5e33]">
-                            <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/facebook.png" class="w-6 h-6" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M22.23 5.924a8.953 8.953 0 01-2.593.71A4.482 4.482 0 0021.675 4.1a8.965 8.965 0 01-2.85 1.09 4.475 4.475 0 00-7.617 3.147c0 .35.042.692.117 1.02a12.683 12.683 0 01-9.2-4.66 4.474 4.474 0 001.39 5.973 4.459 4.459 0 01-2.028-.563v.056a4.475 4.475 0 003.587 4.38 4.498 4.498 0 01-2.021.077 4.476 4.476 0 004.178 3.108 8.976 8.976 0 01-5.564 1.922c-.36 0-.717-.02-1.07-.062a12.676 12.676 0 006.92 2.027c8.3 0 12.833-6.883 12.833-12.833 0-.197-.005-.393-.013-.588a9.163 9.163 0 002.247-2.335z" />
+                            <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/facebook.png"
+                                class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22.23 5.924a8.953 8.953 0 01-2.593.71A4.482 4.482 0 0021.675 4.1a8.965 8.965 0 01-2.85 1.09 4.475 4.475 0 00-7.617 3.147c0 .35.042.692.117 1.02a12.683 12.683 0 01-9.2-4.66 4.474 4.474 0 001.39 5.973 4.459 4.459 0 01-2.028-.563v.056a4.475 4.475 0 003.587 4.38 4.498 4.498 0 01-2.021.077 4.476 4.476 0 004.178 3.108 8.976 8.976 0 01-5.564 1.922c-.36 0-.717-.02-1.07-.062a12.676 12.676 0 006.92 2.027c8.3 0 12.833-6.883 12.833-12.833 0-.197-.005-.393-.013-.588a9.163 9.163 0 002.247-2.335z" />
                             </svg>
                         </a>
                         <a href="#" class="text-[#BA7F47] hover:text-[#8b5e33]">
-                            <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/whatsapp.png" class="w-6 h-6" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12-12-5.373-12-12 5.373-12 12-12zm0 22c5.514 0 10-4.486 10-10s-4.486-10-10-10-10 4.486-10 10 4.486 10 10 10zm1-15h-2v2h-1v2h1v6h2v-6h1v-2h-1v-2zm0-1v1h1v1h-1v-1h-1v1h-1v-1h1v-1h1z" />
+                            <img src="https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/whatsapp.png"
+                                class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12-12-5.373-12-12 5.373-12 12-12zm0 22c5.514 0 10-4.486 10-10s-4.486-10-10-10-10 4.486-10 10 4.486 10 10 10zm1-15h-2v2h-1v2h1v6h2v-6h1v-2h-1v-2zm0-1v1h1v1h-1v-1h-1v1h-1v-1h1v-1h1z" />
                             </svg>
                         </a>
                     </div>
