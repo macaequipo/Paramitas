@@ -56,6 +56,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Mostrar el modal con las fotos correspondientes al hacer clic en una imagen del carrusel de fotos
+    carousel.querySelectorAll('img').forEach((img, index) => {
+        img.addEventListener('click', () => {
+            const cabinName = img.alt;
+            modalImages = cabinPhotos[cabinName];
+            renderModalImages();
+            modal.classList.remove('hidden');
+            currentModalIndex = index;
+            updateModalCarousel();
+        });
+    });
+
     // Renderizar las imágenes en el carrusel del modal
     function renderModalImages() {
         modalCarouselInner.innerHTML = modalImages
