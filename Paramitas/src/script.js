@@ -39,71 +39,91 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Diccionario de fotos por cabaña
     const cabinPhotos = {
-        'Cabaña Serenidad': ['https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/cabana1-1.jpeg', 'https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/cabana1-2.jpeg', 'https://raw.githubusercontent.com/macaequipo/Paramitas/main/Paramitas/public/img/cabana1-3.jpeg'],
-        'Cabaña Paz': ['/img/cabana2-1.jpeg', 'img/cabana2-2.jpeg', '/img/cabana2-3.jpeg'],
-        'Cabaña Armonía': ['/img/cabana3-1.jpeg', '/img/cabana3-2.jpeg', '/img/cabana3-3.jpeg'],
+        'Cabaña Entusiasmo': [
+            '/public/img/Entusiasmo/entusiasmo 2.jpg',
+            '/public/img/Entusiasmo/entusiasmo 3.jpg', 
+            '/public/img/Entusiasmo/entusiasmo 3.jpg', 
+            '/public/img/Entusiasmo/entusiasmo 4.jpg',
+            '/public/img/Entusiasmo/entusiasmo 5.jpg',
+            '/public/img/Entusiasmo/entusiasmo 6.jpg',
+            '/public/img/Entusiasmo/entusiasmo 7.jpg',
+        ],
+        'Cabaña Meditación': [
+            '/public/img/Meditacion/meditacion (1).jpg',
+            '/public/img/Meditacion/meditacion (2).jpg',
+            '/public/img/Meditacion/meditacion (3).jpg',
+            '/public/img/Meditacion/meditacion (4).jpg',
+            '/public/img/Meditacion/meditacion (5).jpg',
+            '/public/img/Meditacion/meditacion (6).jpg',
+
+        ],
+        'Cabaña Paciencia': [
+            '/public/img/Paciencia/paciencia (1).jpg',
+            '/public/img/Paciencia/paciencia (2).jpg',
+            '/public/img/Paciencia/paciencia (3).jpg',
+            '/public/img/Paciencia/paciencia (4).jpg',
+            '/public/img/Paciencia/paciencia (5).jpg',
+            '/public/img/Paciencia/paciencia (6).jpg',
+        ],
+        'Cabaña Sabiduría': [
+            '/public/img/Sabiduria/sabiduria (1).jpg',
+            '/public/img/Sabiduria/sabiduria (2).jpg',
+            '/public/img/Sabiduria/sabiduria (3).jpg',
+            '/public/img/Sabiduria/sabiduria (4).jpg',
+            '/public/img/Sabiduria/sabiduria (5).jpg',
+        ],
+        'Cabaña Conducta': [
+            '/public/img/cabana2.jpeg'
+        ],
+        'Cabaña Generosidad': [
+            '/public/img/cabana5.jpeg'
+        ]
     };
 
-    // Mostrar el modal con las fotos correspondientes
-    document.querySelectorAll('.card img').forEach((img) => {
-        img.addEventListener('click', () => {
-            const cabinName = img.alt;
-            modalImages = cabinPhotos[cabinName];
-            renderModalImages();
-            modal.classList.remove('hidden');
-            currentModalIndex = 0;
-            updateModalCarousel();
-        });
+// Mostrar el modal con las fotos correspondientes
+document.querySelectorAll('.card img').forEach((img) => {
+    img.addEventListener('click', () => {
+        const cabinName = img.alt; // Obtener el nombre de la cabaña del atributo alt
+        modalImages = cabinPhotos[cabinName]; // Obtener las fotos de esa cabaña
+        renderModalImages(); // Renderizar las imágenes en el carrusel
+        document.getElementById('photoModal').classList.remove('hidden'); // Mostrar el modal
+        currentModalIndex = 0; // Reiniciar el índice actual
+        updateModalCarousel(); // Actualizar la posición inicial del carrusel
     });
+});
 
-    // Mostrar el modal con las fotos correspondientes al hacer clic en una imagen del carrusel de fotos
-    carousel.querySelectorAll('img').forEach((img, index) => {
-        img.addEventListener('click', () => {
-            const cabinName = img.alt;
-            modalImages = cabinPhotos[cabinName];
-            renderModalImages();
-            modal.classList.remove('hidden');
-            currentModalIndex = index;
-            updateModalCarousel();
-        });
-    });
+// Renderizar las imágenes en el carrusel
+function renderModalImages() {
+    document.getElementById('modalCarouselInner').innerHTML = modalImages.map((src) => `
+        <div class="flex-shrink-0">
+            <img src="${src}" alt="Cabin Image" class="w-[200px] h-[300px] object-cover rounded-lg">
+        </div>`).join('');
+}
 
-    // Renderizar las imágenes en el carrusel del modal
-    function renderModalImages() {
-        modalCarouselInner.innerHTML = modalImages
-            .map(
-                (src) => `
-                <div class="flex-shrink-0 w-full">
-                    <img src="${src}" alt="Foto de cabaña" class="w-full h-60 object-cover rounded-lg">
-                </div>`
-            )
-            .join('');
-    }
+// Actualizar la posición del carrusel
+function updateModalCarousel() {
+    const offset = -currentModalIndex * 220; // Desplazamiento en píxeles (200px ancho + 20px gap)
+    document.getElementById('modalCarouselInner').style.transform = `translateX(${offset}px)`;
+}
 
-    // Actualizar la posición del carrusel del modal
-    function updateModalCarousel() {
-        const offset = -currentModalIndex * 100; // Desplazamiento en porcentaje
-        modalCarouselInner.style.transform = `translateX(${offset}%)`;
-        modalCarouselInner.style.transition = 'transform 1s ease-in-out'; // Añadir transición más lenta
-    }
+// Botón "Anterior"
+document.getElementById('modalPrev').addEventListener('click', () => {
+    currentModalIndex = (currentModalIndex - 1 + modalImages.length) % modalImages.length;
+    updateModalCarousel();
+});
 
-    // Navegar a la foto anterior en el modal
-    modalPrev.addEventListener('click', () => {
-        currentModalIndex = (currentModalIndex - 1 + modalImages.length) % modalImages.length;
-        updateModalCarousel();
-    });
+// Botón "Siguiente"
+document.getElementById('modalNext').addEventListener('click', () => {
+    currentModalIndex = (currentModalIndex + 1) % modalImages.length;
+    updateModalCarousel();
+});
 
-    // Navegar a la foto siguiente en el modal
-    modalNext.addEventListener('click', () => {
-        currentModalIndex = (currentModalIndex + 1) % modalImages.length;
-        updateModalCarousel();
-    });
+// Cerrar el modal
+document.getElementById('closeModal').addEventListener('click', () => {
+    document.getElementById('photoModal').classList.add('hidden');
+});
 
-    // Cerrar el modal
-    closeModal.addEventListener('click', () => {
-        modal.classList.add('hidden');
-    });
-
+    
     let currentReviewIndex = 0;
     const totalReviewItems = reviewsCarousel.children[0].children.length;
 
