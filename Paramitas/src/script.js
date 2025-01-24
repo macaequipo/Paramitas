@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Diccionario de fotos por cabaña
     const cabinPhotos = {
         'Cabaña Entusiasmo': [
-            '/public/img/Entusiasmo/entusiasmo 2.jpg',
-            '/public/img/Entusiasmo/entusiasmo 3.jpg', 
+            '/public/img/Entusiasmo/entusiasmo 1.jpg',
+            '/public/img/Entusiasmo/entusiasmo 2.jpg', 
             '/public/img/Entusiasmo/entusiasmo 3.jpg', 
             '/public/img/Entusiasmo/entusiasmo 4.jpg',
             '/public/img/Entusiasmo/entusiasmo 5.jpg',
