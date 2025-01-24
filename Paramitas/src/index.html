@@ -29,14 +29,15 @@
 </head>
 
 <body class="bg-[#F6F3EF] text-gray-800 font-noir-pro">
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto flex items-center justify-between py-8 px-6">
-            <img src="/public/img/logo.png"
-                alt="Paramitas" class="h-12">
-            <nav class="space-x-8">
-                <a href="#cabanas" class="text-[#BA7F47] font-semibold text-lg hover:underline">Cabañas</a>
-                <a href="#nosotros" class="text-gray-700 text-lg hover:underline">Nosotros</a>
-                <a href="#contacto" class="text-gray-700 text-lg hover:underline">Contacto</a>
+
+     <!-- Header: Responsive Navigation -->
+     <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between py-4 px-4">
+            <img src="/public/img/logo.png" alt="Paramitas" class="h-10 mb-4 sm:mb-0">
+            <nav class="flex flex-wrap justify-center space-x-0 sm:space-x-4">
+                <a href="#cabanas" class="text-[#BA7F47] font-semibold text-sm sm:text-lg px-2 sm:px-0 hover:underline">Cabañas</a>
+                <a href="#nosotros" class="text-gray-700 text-sm sm:text-lg px-2 sm:px-0 hover:underline">Nosotros</a>
+                <a href="#contacto" class="text-gray-700 text-sm sm:text-lg px-2 sm:px-0 hover:underline">Contacto</a>
             </nav>
         </div>
     </header>
@@ -46,13 +47,11 @@
         style="background-image: url('/public/img/Hero.png');">
         <div class="container mx-auto px-8 py-16">
             <div class="text-left text-[#B3907A] max-w-md">
-                <h1 class="text-6xl font-extrabold mb-4 leading-tight">
-                    Sentí <br>la energía<br>de la montaña
+                <h1 class="text-5xl font-extrabold mb-4 leading-tight">
+                    Sentí la energía<br>de la montaña
                 </h1>
-            </div>
-            <div class="mt-4 flex justify-end">
                 <a href="#cabanas"
-                    class="inline-block bg-[#BA7F47] text-white font-semibold text-lg py-4 px-8 rounded-full hover:bg-[#a66c3e]">
+                    class="inline-block mt-4 bg-[#BA7F47] text-white font-semibold text-lg py-4 px-8 rounded-lg hover:bg-[#a66c3e]">
                     Nuestras Cabañas
                 </a>
             </div>
@@ -61,33 +60,99 @@
 
     <!-- Content Wrapper -->
     <main class="container mx-auto px-6 py-16 font-noir-pro">
-        <!-- Placeholder for sections -->
-        <div id="content">
-            <!-- ¿Para qué Paramitas? -->
-            <section class="bg-[#F6F3EF] py-16">
-                <div class="container mx-auto px-6 text-center">
-                    <h2 class="text-3xl font-bold text-[#BA7F47] mb-6">¿Por qué Paramitas?</h2>
-                    <p class="text-gray-700 text-lg leading-relaxed mb-8">
-                        Somos seguidores de Lama Rinchen, monje tibetano. Paramitas significa "virtudes para liberarse
-                        del sufrimiento".<br>
-                        Un espacio de paz, armonía y renovación.
-                    </p>
-                    <div class="relative mx-auto max-w-4xl">
-                        <p class="relative text-gray-700 text-lg">Enfocados en la calma, el equilibrio y la conexión con
-                            la naturaleza.</p>
-                    </div>
-                </div>
+        <div class="grid grid-cols-2 gap-6 items-center bg-[#F6F3EF] py-16 px-8">
+            <section>
+              <h2 class="text-8x1 font-semibold text-[#CDA96C] mb-8 tracking-widest uppercase text-[40px]">
+                ¿Para qué Paramitas?
+              </h2>
+              <p class="text-[#8A6954] text-base leading-relaxed mb-6 text-8x1 text-[40px] ">
+                Somos seguidores de Lama Rinchen, monje tibetano. Paramitas significa
+                “virtudes para liberarse del sufrimiento”.
+                <br /><br />
+                Generosidad, Conducta, Paciencia, Esfuerzo, Meditación y Sabiduría dan
+                nombre a nuestras cabañas y reflejan el espíritu con el que creamos este
+                lugar,
+              </p>
+              <p class="text-[#8A6954] text-2xl font-bold text-[40px] " >
+                un espacio de paz, <br />
+                armonía y renovación.
+              </p>
             </section>
-            <section id="cabanas" class="bg-white py-16">
-                <div class="container mx-auto px-6">
-                    <h2 class="text-3xl font-bold text-center text-[#BA7F47] mb-6">Nuestras cabañas</h2>
-                    <p class="text-gray-700 text-center text-lg mb-8">
-                        Conocé nuestras opciones de alojamiento diseñadas para brindarte confort y una conexión única
-                        con la naturaleza.
-                    </p>
-
+          
+            <div class="flex justify-center">
+              <img
+                src="/public/img/mandala.webp"
+                alt="Mandala"
+                class="max-w-full h-auto opacity-50"
+              />
+            </div>
+          </div>
+          
+          <section id="cabanas" class="bg-white py-16">
+            <div class="container mx-auto px-6 text-center">
+              <h2 class="text-4xl  text-[#CDA96C] mb-12 tracking-wide font-noir-pro">Nuestras cabañas</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-left items-center">
+                <!-- Ítem 1 -->
+<div class="flex items-center space-x-4">
+    <img src="/path-to-icon1.png" alt="Atención personalizada" class="w-10 h-10">
+    <p class="text-[#734E32] text-sm">
+      <strong>ATENCIÓN PERSONALIZADA</strong> <span class="font-normal">24HS</span>
+    </p>
+  </div>
+  <!-- Ítem 2 -->
+  <div class="flex items-center space-x-4">
+    <img src="/path-to-icon2.png" alt="Cocina completa" class="w-10 h-10">
+    <p class="text-[#734E32] text-sm">
+      <strong>COCINA</strong> <span class="font-normal">COMPLETA</span>
+    </p>
+  </div>
+  <!-- Ítem 3 -->
+  <div class="flex items-center space-x-4">
+    <img src="/path-to-icon3.png" alt="Zona de parrilla" class="w-10 h-10">
+    <p class="text-[#734E32] text-sm">
+      <strong>ZONA DE PARRILLA /</strong> <span class="font-normal">BBQ</span>
+    </p>
+  </div>
+  <!-- Ítem 4 -->
+  <div class="flex items-center space-x-4">
+    <img src="/path-to-icon4.png" alt="Vista 360" class="w-10 h-10">
+    <p class="text-[#734E32] text-sm">
+      <strong>360° DE VISTA</strong> <span class="font-normal">A LA CORDILLERA</span>
+    </p>
+  </div>
+  <!-- Ítem 5 -->
+  <div class="flex items-center space-x-4">
+    <img src="/path-to-icon5.png" alt="Estacionamiento gratis" class="w-10 h-10">
+    <p class="text-[#734E32] text-sm">
+      <strong>ESTACIONAMIENTO</strong> <span class="font-normal">GRATIS</span>
+    </p>
+  </div>
+  <!-- Ítem 6 -->
+  <div class="flex items-center space-x-4">
+    <img src="/path-to-icon6.png" alt="Baños privados" class="w-10 h-10">
+    <p class="text-[#734E32] text-sm">
+      <strong>BAÑOS</strong> <span class="font-normal">PRIVADOS</span>
+    </p>
+  </div>
+  <!-- Ítem 7 -->
+  <div class="flex items-center space-x-4">
+    <img src="/path-to-icon7.png" alt="Ropa de cama" class="w-10 h-10">
+    <p class="text-[#734E32] text-sm">
+      <strong>ROPA DE CAMA Y TOALLAS</strong> <span class="font-normal">INCLUIDAS</span>
+    </p>
+  </div>
+  <!-- Ítem 8 -->
+  <div class="flex items-center space-x-4">
+    <img src="/path-to-icon8.png" alt="WiFi" class="w-10 h-10">
+    <p class="text-[#734E32] text-sm">
+      <strong>WIFI</strong>
+    </p>
+  </div>
+  
+              </div>
+            </div>   
                     <!-- Carrusel de Cards -->
-                    <div class="relative px-4 sm:px-6 lg:px-10">
+                    <div class="relative px-4 sm:px-6 lg:px-10 mt-8">
                         <!-- Contenedor de carrusel con overflow-x-auto -->
                         <div class="overflow-x-auto flex">
                             <!-- Contenedor de las cards con espacio entre ellas -->
@@ -100,7 +165,7 @@
                                         id="carousel">
                                         <img src="/public/img/Entusiasmo/entusiasmo 1.jpg"
                                             alt="Cabaña Entusiasmo" class="w-full h-64 object-cover">
-                                        <div class="p-4">
+                                        <div class="p-6">
                                             <h3 class="text-lg font-semibold text-[#BA7F47]">Cabaña Entusiasmo</h3>
                                             <p class="text-gray-600 mt-1">Disfruta de la calma y el paisaje.</p>
 
@@ -205,30 +270,40 @@
                         </div>
                     </section>
                     
-        <!-- Nosotros -->
-        <section id="nosotros"  class="bg-[#F6F3EF] py-20 px-6 lg:px-12">
-            <div class="container mx-auto px-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Texto -->
-                <div>
-                    <h2 class="text-4xl font-bold text-[#BA7F47] mb-6">Paramitas, nuestro lugar soñado</h2>
-                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                        Paramitas es un lugar para combinar actividades de aventura, descansar, compartir peñas y fogón rodeado de la cordillera. Queremos que cada huésped se sienta como en su propio hogar, que es también el nuestro.
-                    </p>
-                    <p class="text-gray-700 text-lg leading-relaxed">
-                        Lo pensamos, lo soñamos y lo hicimos realidad desde lo más profundo de nuestros corazones. Nuestro espíritu está en cada detalle, desde el trabajo con nuestras propias manos hasta el amor que se respira en cada rincón.
-                    </p>
-                </div>
-                <!-- Imagenes -->
-                <div class="space-y-4">
-                    <img src="/public/img/NOSOTROS 1.png" alt="Nuestro lugar soñado 1"
-                        class="rounded-lg shadow-lg w-full object-cover h-[200px]">
-                    <img src="/public/img/NOSOTROS 2.png" alt="Nuestro lugar soñado 2"
-                        class="rounded-lg shadow-lg w-full object-cover h-[200px]">
-                    <img src="/public/img/NOSOTROS 3.png" alt="Nuestro lugar soñado 3"
-                        class="rounded-lg shadow-lg w-full object-cover h-[200px]">
-                </div>
-            </div>
-        </section>
+                    <div class="lg:col-span-1 mb-8 lg:mb-0">
+                        <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+                          <!-- Título -->
+                          <h2 class="text-4xl font-bold text-[#BA7F47] mb-6 text-center">
+                            Paramitas, nuestro lugar soñado
+                          </h2>
+                          <!-- Descripción -->
+                          <div class="text-gray-700 text-lg leading-relaxed text-center">
+                            <p class="mb-6">
+                              Paramitas es un lugar para combinar actividades de aventura, descansar, compartir peñas y fogón rodeado de la cordillera.
+                              <br> Queremos que cada huésped se sienta como en su propio hogar, que es también el nuestro.
+                            </p>
+                            <p>
+                              Lo pensamos, lo soñamos y lo hicimos realidad desde lo más profundo de nuestros corazones. 
+                              <br>Nuestro espíritu está en cada detalle, desde el trabajo con nuestras propias manos hasta el amor que se respira en cada rincón.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      
+                          <!-- Imágenes -->
+                          <div class="space-y-4 hidden lg:block"> <!-- Ocultar imágenes en móvil -->
+                            <img src="/public/img/NOSOTROS 1.png" alt="Nuestro lugar soñado 1" class="rounded-lg shadow-lg w-full object-cover h-[200px]">
+                            <img src="/public/img/NOSOTROS 2.png" alt="Nuestro lugar soñado 2" class="rounded-lg shadow-lg w-full object-cover h-[200px]">
+                            <img src="/public/img/NOSOTROS 3.png" alt="Nuestro lugar soñado 3" class="rounded-lg shadow-lg w-full object-cover h-[200px]">
+                          </div>
+                      
+                          <!-- Imagen para móvil -->
+                          <div class="lg:hidden"> <!-- Solo mostrar en móvil -->
+                            <img src="/public/img/NOSOTROS 2.png" alt="Nuestro lugar soñado 1" class="rounded-lg shadow-lg w-full object-cover h-[200px]">
+                          </div>
+                        </div>
+                      </section>
 
      <!-- Nuestros huéspedes -->
      <section id="huespedes" class="bg-[#D9B177] py-16">
@@ -381,11 +456,6 @@
     <footer class="bg-[#BA7F47] text-white py-8">
         <div class="container mx-auto flex flex-wrap justify-between items-center px-6">
             <p>&copy; 2024 Paramitas Cabañas de Montaña. Todos los derechos reservados. Hecho con amor por MACA</p>
-            <div class="flex space-x-6">
-                <a href="https://www.facebook.com/share/19Gng4tJsw/?mibextid=wwXIfr" class="hover:text-gray-300">Facebook</a>
-                <a href="https://www.instagram.com/paramitas.uspallata?igsh=amZwODkyaml6a2Fz" class="hover:text-gray-300">Instagram</a>
-                <a href="https://wa.me/5493496418252?text=Hola,%20me%20interesa%20reservar%20una%20cabaña." class="hover:text-gray-300">WhatsApp</a>
-            </div>
         </div>
     </footer>
 

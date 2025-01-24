@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramitas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/src/output.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Noir Pro';
+            src: url('/fonts/NoirPro-Regular.woff2') format('woff2'),
+                url('/fonts/NoirPro-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Noir Pro';
+            src: url('/fonts/NoirPro-Bold.woff2') format('woff2'),
+                url('/fonts/NoirPro-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+
+<body class="bg-[#F6F3EF] text-gray-800 font-noir-pro">
+    <!-- Header: Responsive Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between py-4 px-4">
+            <img src="/public/img/logo.png" alt="Paramitas" class="h-10 mb-4 sm:mb-0">
+            <nav class="flex flex-wrap justify-center space-x-0 sm:space-x-4">
+                <a href="#cabanas" class="text-[#BA7F47] font-semibold text-sm sm:text-lg px-2 sm:px-0 hover:underline">Cabañas</a>
+                <a href="#nosotros" class="text-gray-700 text-sm sm:text-lg px-2 sm:px-0 hover:underline">Nosotros</a>
+                <a href="#contacto" class="text-gray-700 text-sm sm:text-lg px-2 sm:px-0 hover:underline">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section: Responsive -->
+    <section class="relative bg-cover bg-center min-h-screen" style="background-image: url('/public/img/Hero.png');">
+        <div class="container mx-auto px-4 py-16 flex items-center justify-center sm:justify-start h-full">
+            <div class="text-center sm:text-left text-[#B3907A] max-w-md">
+                <h1 class="text-3xl sm:text-5xl font-extrabold mb-4 leading-tight">
+                    Sentí la energía<br class="hidden sm:block"> de la montaña
+                </h1>
+                <a href="#cabanas" class="inline-block mt-4 bg-[#BA7F47] text-white font-semibold text-base sm:text-lg py-3 px-6 sm:px-8 rounded-full hover:bg-[#a66c3e]">
+                    Nuestras Cabañas
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Wrapper -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Paramitas Description Section -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center bg-[#F6F3EF] py-8 px-4">
+            <section class="text-center sm:text-left">
+                <h2 class="text-2xl sm:text-4xl font-semibold text-[#CDA96C] mb-4 tracking-widest uppercase">
+                    ¿Para qué Paramitas?
+                </h2>
+                <p class="text-[#8A6954] text-base leading-relaxed mb-4">
+                    Somos seguidores de Lama Rinchen, monje tibetano. Paramitas significa
+                    "virtudes para liberarse del sufrimiento".
+                </p>
+                <p class="text-[#8A6954] text-base font-bold">
+                    un espacio de paz, armonía y renovación.
+                </p>
+            </section>
+          
+            <div class="flex justify-center">
+                <img src="/public/img/mandala.webp" alt="Mandala" class="max-w-full h-auto opacity-50">
+            </div>
+        </div>
+
+        <!-- Cabañas Section -->
+        <section id="cabanas" class="bg-white py-8">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-2xl sm:text-4xl font-bold text-[#CDA96C] mb-8 tracking-wide">Nuestras cabañas</h2>
+                
+                <!-- Amenities Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-left items-center mb-8">
+                    <div class="flex items-center space-x-2">
+                        <img src="/path-to-icon1.png" alt="Atención personalizada" class="w-8 h-8">
+                        <p class="text-[#734E32] text-xs sm:text-sm">
+                            <strong>ATENCIÓN</strong> <span class="font-normal">24HS</span>
+                        </p>
+                    </div>
+                    <!-- Repeat for other amenities with similar responsive classes -->
+                </div>
+
+                <!-- Carrusel de Cards: Horizontally Scrollable -->
+                <div class="relative px-4 sm:px-6 lg:px-10 mt-8">
+                    <div class="overflow-x-auto flex">
+                        <div class="flex gap-4 lg:gap-8" id="carousel">
+                            <!-- Card 1: Use consistent responsive classes -->
+                            <div class="card w-64 sm:w-72 flex-shrink-0 p-2">
+                                <div class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-300 ease-in-out hover:scale-105">
+                                    <img src="/public/img/Entusiasmo/entusiasmo 1.jpg" alt="Cabaña Entusiasmo" class="w-full h-48 object-cover">
+                                    <div class="p-4">
+                                        <h3 class="text-base font-semibold text-[#BA7F47]">Cabaña Entusiasmo</h3>
+                                        <p class="text-gray-600 mt-1 text-sm">Disfruta de la calma y el paisaje.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Repeat for other cabin cards with similar structure -->
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation Buttons -->
+                    <button id="prevButton" class="absolute top-1/2 left-0 transform -translate-y-1/2 text-[#BA7F47] text-2xl sm:text-4xl hover:text-[#a66c3e] transition-colors">
+                        &#8592;
+                    </button>
+                    <button id="nextButton" class="absolute top-1/2 right-0 transform -translate-y-1/2 text-[#BA7F47] text-2xl sm:text-4xl hover:text-[#a66c3e] transition-colors">
+                        &#8594;
+                    </button>
+                </div>
+
+                <!-- Reserva Button -->
+                <div class="text-center mt-8">
+                    <a href="https://wa.me/5493496418252?text=Hola,%20me%20interesa%20reservar%20una%20cabaña." 
+                       class="bg-[#BA7F47] text-white font-bold py-3 px-6 sm:px-10 rounded-xl text-base sm:text-xl hover:bg-[#a66c3e] shadow-lg transform transition duration-300 ease-in-out hover:scale-105"
+                       target="_blank">
+                        Reservar
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nosotros Section -->
+        <section id="nosotros" class="bg-[#F6F3EF] py-8 px-4">
+            <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+                <div class="text-center lg:text-left">
+                    <h2 class="text-2xl sm:text-4xl font-bold text-[#BA7F47] mb-4">Paramitas, nuestro lugar soñado</h2>
+                    <p class="text-gray-700 text-base leading-relaxed mb-4">
+                        Paramitas es un lugar para combinar actividades de aventura, descansar, compartir peñas y fogón rodeado de la cordillera.
+                    </p>
+                    <p class="text-gray-700 text-base leading-relaxed">
+                        Lo pensamos, lo soñamos y lo hicimos realidad desde lo más profundo de nuestros corazones.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <img src="/public/img/NOSOTROS 1.png" alt="Nuestro lugar" class="rounded-lg w-full h-48 sm:h-64 object-cover">
+                    <img src="/public/img/NOSOTROS 2.png" alt="Nuestro lugar" class="rounded-lg w-full h-48 sm:h-64 object-cover">
+                    <img src="/public/img/NOSOTROS 3.png" alt="Nuestro lugar" class="rounded-lg w-full h-48 sm:h-64 object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- Huéspedes Section -->
+        <section id="huespedes" class="bg-[#D9B177] py-8">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6">Nuestros huéspedes</h2>
+                <div class="relative">
+                    <div class="overflow-x-auto flex">
+                        <div class="flex gap-4 transition-transform duration-500 ease-in-out items-stretch">
+                            <!-- Testimonial Cards -->
+                            <div class="bg-white rounded-lg shadow-lg p-4 flex-shrink-0 w-64 sm:w-72 flex flex-col justify-between">
+                                <p class="text-gray-700 italic text-sm mb-4">
+                                    "Hermosas cabañas y los dueños muy amables en todo."
+                                </p>
+                                <div class="flex items-center justify-center">
+                                    <img src="/public/img/Barrionuevo_resena.png" alt="Review" class="w-10 h-10 rounded-full object-cover mr-4">
+                                    <div>
+                                        <p class="font-bold text-gray-800 text-sm">Christian Barrionuevo</p>
+                                        <p class="text-xs text-gray-600">⭐⭐⭐⭐⭐</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Repeat for other testimonials -->
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation Buttons -->
+                    <button id="reviewsPrevButton" class="absolute top-1/2 left-0 transform -translate-y-1/2 text-[#BA7F47] text-2xl sm:text-4xl hover:text-[#a66c3e] transition-colors">
+                        &#8592;
+                    </button>
+                    <button id="reviewsNextButton" class="absolute top-1/2 right-0 transform -translate-y-1/2 text-[#BA7F47] text-2xl sm:text-4xl hover:text-[#a66c3e] transition-colors">
+                        &#8594;
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto Section -->
+        <section id="contacto" class="bg-[#F6F3EF] py-8">
+            <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="text-center md:text-left">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-[#BA7F47] mb-4">Contactanos</h2>
+                    <ul class="space-y-2 text-gray-700 text-sm sm:text-base">
+                        <li>+54 9 3496 41 8252</li>
+                        <li>paramitasuspallata@gmail.com</li>
+                        <li>Uspallata, Mendoza, Argentina</li>
+                    </ul>
+                    <div class="flex justify-center md:justify-start space-x-4 mt-4">
+                        <a href="https://www.instagram.com/paramitas.uspallata" class="text-[#BA7F47] hover:text-[#8b5e33]">
+                            <img src="/public/img/instagram.png" class="w-6 h-6">
+                        </a>
+                        <a href="https://www.facebook.com/share/19Gng4tJsw/" class="text-[#BA7F47] hover:text-[#8b5e33]">
+                            <img src="/public/img/facebook.png" class="w-6 h-6">
+                        </a>
+                        <a href="https://wa.me/5493496418252" class="text-[#BA7F47] hover:text-[#8b5e33]">
+                            <img src="/public/img/whatsapp.png" class="w-6 h-6">
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.773773752297!2d-69.3368414!3d-32.5588824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x968769a64a961eb9%3A0xf8e74f00dbf15449!2sParamitas%20Caba%C3%B1as%20de%20Monta%C3%B1a!5e0!3m2!1ses!2sar!4v1734369471404!5m2!1ses!2sar" 
+                        width="100%" 
+                        height="250" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        class="rounded-lg
