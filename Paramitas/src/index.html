@@ -42,16 +42,31 @@
         </div>
     </header>
     
-    <!-- Hero Section -->
-    <section class="relative bg-cover bg-center min-h-screen"
-        style="background-image: url('/public/img/Hero.png');">
-        <div class="container mx-auto px-8 py-16">
+    <section class="relative min-h-screen overflow-hidden">
+        <!-- Video de fondo -->
+        <video 
+            class="absolute top-0 left-0 w-full h-full object-cover -z-10"
+            autoplay 
+            muted 
+            loop 
+            playsinline
+        >
+            <source src="/public/img/video web ok.mp4" type="video/mp4">
+            <!-- Fallback para navegadores que no soportan video -->
+            <img src="/public/img/Hero.png" alt="Imagen de fondo" class="w-full h-full object-cover">
+        </video>
+    
+        <!-- Overlay opcional para mejorar la legibilidad del texto -->
+        <div class="absolute inset-0 bg-black/30"></div>
+    
+        <!-- Contenido -->
+        <div class="container mx-auto px-8 py-16 relative">
             <div class="text-left text-[#B3907A] max-w-md">
                 <h1 class="text-5xl font-extrabold mb-4 leading-tight">
                     Sentí la energía<br>de la montaña
                 </h1>
                 <a href="#cabanas"
-                    class="inline-block mt-4 bg-[#BA7F47] text-white font-semibold text-lg py-4 px-8 rounded-lg hover:bg-[#a66c3e]">
+                    class="inline-block mt-4 bg-[#BA7F47] text-white font-semibold text-lg py-4 px-8 rounded-lg hover:bg-[#a66c3e] transition-colors duration-300">
                     Nuestras Cabañas
                 </a>
             </div>
@@ -60,33 +75,36 @@
 
     <!-- Content Wrapper -->
     <main class="container mx-auto px-6 py-16 font-noir-pro">
-        <div class="grid grid-cols-2 gap-6 items-center bg-[#F6F3EF] py-16 px-8">
-            <section>
-              <h2 class="text-8x1 font-semibold text-[#CDA96C] mb-8 tracking-widest uppercase text-[40px]">
-                ¿Para qué Paramitas?
-              </h2>
-              <p class="text-[#8A6954] text-base leading-relaxed mb-6 text-8x1 text-[40px] ">
-                Somos seguidores de Lama Rinchen, monje tibetano. Paramitas significa
-                “virtudes para liberarse del sufrimiento”.
-                <br /><br />
-                Generosidad, Conducta, Paciencia, Esfuerzo, Meditación y Sabiduría dan
-                nombre a nuestras cabañas y reflejan el espíritu con el que creamos este
-                lugar,
-              </p>
-              <p class="text-[#8A6954] text-2xl font-bold text-[40px] " >
-                un espacio de paz, <br />
-                armonía y renovación.
-              </p>
-            </section>
+        <div class="bg-[#F6F3EF] py-12 px-6">
+            <div class="max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
+              <section class="text-center sm:text-left w-[90%] mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-semibold text-[#CDA96C] mb-6 tracking-widest uppercase font-noir-pro">
+                  ¿Para qué Paramitas?
+                </h2>
+                <p class="text-[#8A6954] text-lg sm:text-xl leading-relaxed mb-4 font-noir-pro">
+                  Somos seguidores de Lama Rinchen, monje tibetano. Paramitas significa 
+                  “virtudes para liberarse del sufrimiento”.
+                </p>
+                <p class="text-[#8A6954] text-lg sm:text-xl leading-relaxed mb-4 font-noir-pro">
+                  Generosidad, Conducta, Paciencia, Esfuerzo, Meditación y Sabiduría dan 
+                  nombre a nuestras cabañas y reflejan el espíritu con el que creamos este lugar.
+                </p>
+                <p class="text-[#8A6954] text-xl font-bold font-noir-pro">
+                  un espacio de paz, <br class="hidden sm:block"/> 
+                  armonía y renovación.
+                </p>
+              </section>
           
-            <div class="flex justify-center">
-              <img
-                src="/public/img/mandala.webp"
-                alt="Mandala"
-                class="max-w-full h-auto opacity-50"
-              />
+              <div class="flex justify-center">
+                <img
+                  src="/public/img/MANDALA.png"
+                  alt="Mandala"
+                  class="max-w-[250px] sm:max-w-full h-auto opacity-50"
+                />
+              </div>
             </div>
           </div>
+          
           
           <section id="cabanas" class="bg-white py-16">
             <div class="container mx-auto px-6 text-center">
@@ -94,170 +112,174 @@
               <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-left items-center">
                 <!-- Ítem 1 -->
 <div class="flex items-center space-x-4">
-    <img src="/path-to-icon1.png" alt="Atención personalizada" class="w-10 h-10">
+    <img src="/public/img/SERVICIOS/atencion personalizada.png" alt= "Atención personalizada" class="w-10 h-10">
     <p class="text-[#734E32] text-sm">
       <strong>ATENCIÓN PERSONALIZADA</strong> <span class="font-normal">24HS</span>
     </p>
   </div>
   <!-- Ítem 2 -->
   <div class="flex items-center space-x-4">
-    <img src="/path-to-icon2.png" alt="Cocina completa" class="w-10 h-10">
+    <img src="/public/img/SERVICIOS/cocina.png" alt="Cocina completa" class="w-10 h-10">
     <p class="text-[#734E32] text-sm">
       <strong>COCINA</strong> <span class="font-normal">COMPLETA</span>
     </p>
   </div>
   <!-- Ítem 3 -->
   <div class="flex items-center space-x-4">
-    <img src="/path-to-icon3.png" alt="Zona de parrilla" class="w-10 h-10">
+    <img src="/public/img/SERVICIOS/parrilla.png" alt="Zona de parrilla" class="w-10 h-10">
     <p class="text-[#734E32] text-sm">
       <strong>ZONA DE PARRILLA /</strong> <span class="font-normal">BBQ</span>
     </p>
   </div>
   <!-- Ítem 4 -->
   <div class="flex items-center space-x-4">
-    <img src="/path-to-icon4.png" alt="Vista 360" class="w-10 h-10">
+    <img src="/public/img/SERVICIOS/360 vistas.png" alt="Vista 360" class="w-10 h-10">
     <p class="text-[#734E32] text-sm">
       <strong>360° DE VISTA</strong> <span class="font-normal">A LA CORDILLERA</span>
     </p>
   </div>
   <!-- Ítem 5 -->
   <div class="flex items-center space-x-4">
-    <img src="/path-to-icon5.png" alt="Estacionamiento gratis" class="w-10 h-10">
+    <img src="/public/img/SERVICIOS/estacionamiento.png" alt="Estacionamiento gratis" class="w-10 h-10">
     <p class="text-[#734E32] text-sm">
       <strong>ESTACIONAMIENTO</strong> <span class="font-normal">GRATIS</span>
     </p>
   </div>
   <!-- Ítem 6 -->
   <div class="flex items-center space-x-4">
-    <img src="/path-to-icon6.png" alt="Baños privados" class="w-10 h-10">
+    <img src="/public/img/SERVICIOS/estacionamiento.png" alt="Baños privados" class="w-10 h-10">
     <p class="text-[#734E32] text-sm">
       <strong>BAÑOS</strong> <span class="font-normal">PRIVADOS</span>
     </p>
   </div>
   <!-- Ítem 7 -->
   <div class="flex items-center space-x-4">
-    <img src="/path-to-icon7.png" alt="Ropa de cama" class="w-10 h-10">
+    <img src="/public/img/SERVICIOS/toallas.png" alt="Ropa de cama" class="w-10 h-10">
     <p class="text-[#734E32] text-sm">
       <strong>ROPA DE CAMA Y TOALLAS</strong> <span class="font-normal">INCLUIDAS</span>
     </p>
   </div>
   <!-- Ítem 8 -->
   <div class="flex items-center space-x-4">
-    <img src="/path-to-icon8.png" alt="WiFi" class="w-10 h-10">
+    <img src="/public/img/SERVICIOS/wifi.png" alt="WiFi" class="w-10 h-10">
     <p class="text-[#734E32] text-sm">
       <strong>WIFI</strong>
     </p>
   </div>
   
               </div>
+<section>   
+
             </div>   
                     <!-- Carrusel de Cards -->
                     <div class="relative px-4 sm:px-6 lg:px-10 mt-8">
                         <!-- Contenedor de carrusel con overflow-x-auto -->
-                        <div class="overflow-x-auto flex">
+                        <div class="overflow-x-auto flex snap-x snap-mandatory scrollbar-hide">
                             <!-- Contenedor de las cards con espacio entre ellas -->
-                            <div class="flex gap-8 lg:gap-12" id="carousel"
-                                class="flex transition-transform duration-500 ease-in-out">
+                            <div class="flex gap-4 sm:gap-8 lg:gap-12" id="carousel"
+                                class="flex transition-transform duration-500 ease-in-out" id="carouselContainer">
                                 <!-- Card 1 -->
-                                <div class="card w-full max-w-[450px] sm:max-w-[50%] lg:max-w-[35%] flex-shrink-0 p-2"
+                                <div class="card w-[80%] max-w-[280px] sm:max-w-[50%] lg:max-w-[35%] flex-shrink-0 p-2 snap-center"
                                     class="card w-[300px] flex-shrink-0">
                                     <div class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-1000 ease-in-out hover:scale-105 hover:shadow-2xl"
                                         id="carousel">
                                         <img src="/public/img/Entusiasmo/entusiasmo 1.jpg"
-                                            alt="Cabaña Entusiasmo" class="w-full h-64 object-cover">
+                                            alt="Cabaña Entusiasmo" class="w-full h-64 object-cover h-48 sm:h-64">
                                         <div class="p-6">
-                                            <h3 class="text-lg font-semibold text-[#BA7F47]">Cabaña Entusiasmo</h3>
-                                            <p class="text-gray-600 mt-1">Disfruta de la calma y el paisaje.</p>
+                                            <h3 class="text-sm sm:text-base font-semibold text-[#BA7F47]">Cabaña Entusiasmo</h3>
+                                            <p class="text-gray-600 mt-1 text-sm sm:text-base">Disfruta de la calma y el paisaje.</p>
 
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Card 2 -->
-                                <div class="card w-full max-w-[450px] sm:max-w-[50%] lg:max-w-[35%] flex-shrink-0 p-2"
+                                <div class="card w-[80%] max-w-[280px] sm:max-w-[50%] lg:max-w-[35%] flex-shrink-0 p-2 snap-center"
                                     class="card w-[300px] flex-shrink-0">
                                     <div class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-1000 ease-in-out hover:scale-105 hover:shadow-2xl"
                                         id="carousel">
                                         <img src="/public/img/Meditacion/meditacion (1).jpg"
-                                            alt="Cabaña Meditación" class="w-full h-64 object-cover">
+                                            alt="Cabaña Meditación" class="w-full h-64 object-cover h-48 sm:h-64">
                                         <div class="p-6">
-                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Meditación</h3>
-                                            <p class="text-gray-600 mt-2">Perfecta para desconectarte.</p>
+                                            <h3 class="text-sm sm:text-base font-semibold text-[#BA7F47]">Cabaña Meditación</h3>
+                                            <p class="text-gray-600 mt-1 text-sm sm:text-base">Perfecta para desconectarte.</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Card 3 -->
-                                <div class="card w-full max-w-[450px] sm:max-w-[50%] lg:max-w-[35%] flex-shrink-0 p-2"
+                                <div class="card w-[80%] max-w-[280px] sm:max-w-[50%] lg:max-w-[35%] flex-shrink-0 p-2 snap-center"
                                     class="card w-[300px] flex-shrink-0">
                                     <div class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-1000 ease-in-out hover:scale-105 hover:shadow-2xl"
                                         id="carousel">
                                         <img src="/public/img/Paciencia/paciencia (1).jpg"
-                                            alt="Cabaña Paciencia" class="w-full h-64 object-cover">
+                                            alt="Cabaña Paciencia" class="w-full h-64 object-cover h-48 sm:h-64">
                                         <div class="p-6">
-                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Paciencia</h3>
-                                            <p class="text-gray-600 mt-2">Ideal para familias.</p>
+                                            <h3 class="text-sm sm:text-base font-semibold text-[#BA7F47]">Cabaña Paciencia</h3>
+                                            <p class="text-gray-600 mt-1 text-sm sm:text-base">Ideal para familias.</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Card 4 -->
-                                <div class="card w-full max-w-[450px] sm:max-w-[50%] lg:max-w-[35%] flex-shrink-0 p-2"
+                                <div class="card w-[80%] max-w-[280px] sm:max-w-[50%] lg:max-w-[35%] flex-shrink-0 p-2 snap-center"
                                     class="card w-[300px] flex-shrink-0">
                                     <div class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-1000 ease-in-out hover:scale-105 hover:shadow-2xl"
                                         id="carousel">
                                         <img src="/public/img/Sabiduria/sabiduria (2).jpg"
-                                            alt="Cabaña Sabiduría" class="w-full h-64 object-cover">
+                                            alt="Cabaña Sabiduría" class="w-full h-64 object-cover h-48 sm:h-64">
                                         <div class="p-6">
-                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Sabiduría</h3>
-                                            <p class="text-gray-600 mt-2">Perfecta para desconectarte.</p>
+                                            <h3 class="text-sm sm:text-base font-semibold text-[#BA7F47]">Cabaña Sabiduría</h3>
+                                            <p class="text-gray-600 mt-1 text-sm sm:text-base">Perfecta para desconectarte.</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Card 5 -->
-                                <div class="card w-full max-w-[450px] sm:max-w-[50%] lg:max-w-[35%] flex-shrink-0 p-2"
+                                <div class="card w-[80%] max-w-[280px] sm:max-w-[50%] lg:max-w-[35%] flex-shrink-0 p-2 snap-center"
                                     class="card w-[300px] flex-shrink-0">
                                     <div class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl"
                                         id="carousel">
                                         <img src="/public/img/cabana2.jpeg"
-                                            alt="Cabaña Conducta" class="w-full h-64 object-cover">
+                                            alt="Cabaña Conducta" class="w-full h-64 object-cover h-48 sm:h-64">
                                         <div class="p-6">
-                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Conducta</h3>
-                                            <p class="text-gray-600 mt-2">Escapada perfecta a la naturaleza.</p>
+                                            <h3 class="text-sm sm:text-base font-semibold text-[#BA7F47]">Cabaña Conducta</h3>
+                                            <p class="text-gray-600 mt-1 text-sm sm:text-base">Escapada perfecta a la naturaleza.</p>
                                         </div>
                                     </div>
                                 </div>
                                 <!--Card 6-->
-                                <div class="card w-full max-w-[450px] sm:max-w-[50%] lg:max-w-[35%] flex-shrink-0 p-2"
+                                <div class="card w-[80%] max-w-[280px] sm:max-w-[50%] lg:max-w-[35%] flex-shrink-0 p-2 snap-center"
                                     class="card w-[300px] flex-shrink-0">
                                     <div class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl"
                                         id="carousel">
                                         <img src="/public/img/cabana4.jpeg"
-                                            alt="Cabaña Generosidad" class="w-full h-64 object-cover">
+                                            alt="Cabaña Generosidad" class="w-full h-64 object-cover h-48 sm:h-64">
                                         <div class="p-6">
-                                            <h3 class="text-xl font-semibold text-[#BA7F47]">Cabaña Generosidad</h3>
-                                            <p class="text-gray-600 mt-2">Escapada perfecta a la naturaleza.</p>
+                                            <h3 class="text-sm sm:text-base font-semibold text-[#BA7F47]">Cabaña Generosidad</h3>
+                                            <p class="text-gray-600 mt-1 text-sm sm:text-base">Escapada perfecta a la naturaleza.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- </div> -->
                         </div>
-                        <!-- Indicadores del carrusel -->
-                        <div id="indicators" class="flex justify-center mt-4">
-                            <!-- Los indicadores se generarán dinámicamente en el script.js -->
-                        </div>
                         <!-- Botones de navegación -->
-                        <button id="prevButton"
-                            class="absolute top-1/2 left-0 transform -translate-y-1/2 text-[#BA7F47] text-4xl hover:text-[#a66c3e] transition-colors">
-                            &#8592;
+                        <button id="prevButton" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-2 shadow-lg">
+                            <!-- Ícono previo -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#BA7F47]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                            </svg>
                         </button>
-                        <button id="nextButton"
-                            class="absolute top-1/2 right-0 transform -translate-y-1/2 text-[#BA7F47] text-4xl hover:text-[#a66c3e] transition-colors">
-                            &#8594;
+                        
+                        <button id="nextButton" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-2 shadow-lg">
+                            <!-- Ícono siguiente -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#BA7F47]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
                         </button>
-                    </div>
+                    </section>
+
 
                     <section>
                         <!-- Botón Reservar -->
@@ -270,25 +292,26 @@
                         </div>
                     </section>
                     
-                    <div class="lg:col-span-1 mb-8 lg:mb-0">
-                        <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
-                          <!-- Título -->
-                          <h2 class="text-4xl font-bold text-[#BA7F47] mb-6 text-center">
-                            Paramitas, nuestro lugar soñado
-                          </h2>
-                          <!-- Descripción -->
-                          <div class="text-gray-700 text-lg leading-relaxed text-center">
-                            <p class="mb-6">
-                              Paramitas es un lugar para combinar actividades de aventura, descansar, compartir peñas y fogón rodeado de la cordillera.
-                              <br> Queremos que cada huésped se sienta como en su propio hogar, que es también el nuestro.
-                            </p>
-                            <p>
-                              Lo pensamos, lo soñamos y lo hicimos realidad desde lo más profundo de nuestros corazones. 
-                              <br>Nuestro espíritu está en cada detalle, desde el trabajo con nuestras propias manos hasta el amor que se respira en cada rincón.
-                            </p>
-                          </div>
+                    <div class="lg:col-span-1 mb-6 lg:mb-0">
+                        <div class="bg-white p-4 sm:p-6 rounded-lg shadow-lg flex flex-col items-center">
+                            <!-- Título -->
+                            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#BA7F47] mb-4 sm:mb-6 text-center">
+                                Paramitas, nuestro lugar soñado
+                            </h2>
+                            <!-- Descripción -->
+                            <div class="text-gray-700 text-base sm:text-lg leading-relaxed text-center">
+                                <p class="mb-4 sm:mb-6">
+                                    Paramitas es un lugar para combinar actividades de aventura, descansar, compartir peñas y fogón rodeado de la cordillera.
+                                    <br> Queremos que cada huésped se sienta como en su propio hogar, que es también el nuestro.
+                                </p>
+                                <p>
+                                    Lo pensamos, lo soñamos y lo hicimos realidad desde lo más profundo de nuestros corazones.
+                                    <br>Nuestro espíritu está en cada detalle, desde el trabajo con nuestras propias manos hasta el amor que se respira en cada rincón.
+                                </p>
+                            </div>
                         </div>
-                      </div>
+                    </div>
+                    
                       
                       
                           <!-- Imágenes -->
@@ -300,7 +323,7 @@
                       
                           <!-- Imagen para móvil -->
                           <div class="lg:hidden"> <!-- Solo mostrar en móvil -->
-                            <img src="/public/img/NOSOTROS 2.png" alt="Nuestro lugar soñado 1" class="rounded-lg shadow-lg w-full object-cover h-[200px]">
+                            <img src="/public/img/NOSOTROS 3.png" alt="Nuestro lugar soñado 1" class="rounded-lg shadow-lg w-full object-cover h-[200px]">
                           </div>
                         </div>
                       </section>
@@ -311,11 +334,11 @@
             <h2 class="text-3xl font-bold text-white mb-8">Nuestros huéspedes</h2>
             <div class="relative">
                 <!-- Contenedor del carrusel -->
-                <div class="overflow-x-auto flex" id="reviewsCarousel">
+                <div class="overflow-hidden" id="reviewsCarousel">
                     <!-- Contenedor de las cards -->
-                    <div class="flex gap-4 lg:gap-8 transition-transform duration-500 ease-in-out items-stretch">
+                    <div class="flex gap-8 transition-transform duration-500 ease-in-out items-stretch">
                         <!-- Ejemplo de Testimonio -->
-                        <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 max-w-[300px] flex flex-col justify-between">
+                        <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 max-w-[250px] sm:max-w-[300px] flex flex-col justify-between">
                             <p class="text-gray-700 italic mb-4">
                                 "Hermosas cabañas y los dueños muy amables en todo. Voy a volver sin dudas. Al estar a 1 km alejado del centro hace que se descanse muy bien y ni que hablar de las vistas que tienen.. Increible!"
                             </p>
@@ -329,7 +352,7 @@
                             <a href="http://bit.ly/4heYfKp" class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
                         </div>
                         <!-- Testimonio 2 -->
-                        <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 max-w-[300px] flex flex-col justify-between">
+                        <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 max-w-[250px] sm:max-w-[300px] flex flex-col justify-between">
                             <p class="text-gray-700 italic mb-4">
                                 "Cabañas muy acogedoras. El baño es muuuuuy bueno. Las camas son terriblemente cómodas. Las vistas, simplemente espectaculares. El hecho de que esté algo alejado de la localidad logra silencio y paz. Es muy fácil de llegar. Excelente atención de los dueños, quienes no descuidan en ningún momento los detalles del lugar."
                             </p>
@@ -343,7 +366,7 @@
                             <a href="http://bit.ly/4heYfKp" class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
                         </div>
                         <!-- Testimonio 4 -->
-                        <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 max-w-[300px] flex flex-col justify-between">
+                        <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 max-w-[250px] sm:max-w-[300px] flex flex-col justify-between">
                             <p class="text-gray-700 italic mb-4">
                                 "Excelente atención, muy buen precio, la tranquilidad y el paisaje del lugar son espectaculares. Super recomendable para el qué quiere desenchufarse."
                             </p>
@@ -357,7 +380,7 @@
                             <a href="http://bit.ly/4heYfKp" class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
                         </div>
                         <!-- Testimonio 5 -->
-                        <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 max-w-[300px] flex flex-col justify-between">
+                        <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 max-w-[250px] sm:max-w-[300px] flex flex-col justify-between">
                             <p class="text-gray-700 italic mb-4">
                                 "Un lugar soñado para descansar y conectarse con la naturaleza. Las cabañas son preciosas y están muy limpias. La dueña es súper amable y atenta. Definitivamente es el lugar adecuado para descansar un par de días."
                             </p>
@@ -371,9 +394,9 @@
                             <a href="http://bit.ly/4heYfKp" class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
                         </div>
                         <!-- Testimonio 6  -->
-                        <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 max-w-[300px] flex flex-col justify-between">
+                        <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 max-w-[250px] sm:max-w-[300px] flex flex-col justify-between">
                             <p class="text-gray-700 italic mb-4">
-                                "Te deja sin palabras, es ideal si querés alejarte de todo pero sin estar tan lejos. Está cerca del centro de Uspallata pero lo suficientemente lejos para poder ver el cielo lleno de estrellas. Además al amanecer ves el sol pegando en las montañas nevadas. Emocionante. Los anfitriones super atentos. La cabaña muy completa."
+                                "Es tan especial , tan bien ubicada y una decoración cálida y justa para sentirte parte de la naturaleza y su armonía. Super recomendable. Excelente atención de Carol tiene todo lo indispensable para unos días de paz. Estratégico para todas las excursiones y aventuras. Cero ruido. Cálida y confortable, bien rústica y acorde al ambiente hermoso que se respira. 💘"
                             </p>
                             <div class="flex items-center justify-center">
                                 <img src="/public/img/sanchez_resena.png" alt="Google Review" class="w-12 h-12 rounded-full object-cover mr-4">
@@ -384,16 +407,65 @@
                             </div>
                             <a href="http://bit.ly/4heYfKp" class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
                         </div>
+                        <!-- Testimonio 7  -->
+                        <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 max-w-[250px] sm:max-w-[300px] flex flex-col justify-between">
+                            <p class="text-gray-700 italic mb-4">
+                                "Fui a festejar mi cumpleaños con amigas, el lugar nos pareció increíble, un paisaje de ensueño, las cabañas hermosas con todas las comodidades, su dueña fue súper generosa y cordial. Pude vivir un día muy especial . Muchas gracias"
+                            </p>
+                            <div class="flex items-center justify-center">
+                                <img src="/public/img/meme_resena.png" alt="Google Review" class="w-12 h-12 rounded-full object-cover mr-4">
+                                <div>
+                                    <p class="font-bold text-gray-800">Meme Recabarren</p>
+                                    <p class="text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
+                                </div>
+                            </div>
+                            <a href="http://bit.ly/4heYfKp" class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
+                        </div>
+                        <!-- Testimonio 8  -->
+                        <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 max-w-[250px] sm:max-w-[300px] flex flex-col justify-between">
+                            <p class="text-gray-700 italic mb-4">
+                                "La mejor opción en Uspallata, cabañas re lindas y confortables, excelente atención y amabilidad de los propios dueños, y el lugar es único, inigualable, con una vista 360 a la montaña que hipnotiza. No se pueden perder esa experiencia de paz y armonía"
+                            </p>
+                            <div class="flex items-center justify-center">
+                                <img src="/public/img/raul_resena.png" alt="Google Review" class="w-12 h-12 rounded-full object-cover mr-4">
+                                <div>
+                                    <p class="font-bold text-gray-800">Raul Gagliardo</p>
+                                    <p class="text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
+                                </div>
+                            </div>
+                            <a href="http://bit.ly/4heYfKp" class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
+                        </div>
+                        <!-- Testimonio 9  -->
+                        <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 max-w-[250px] sm:max-w-[300px] flex flex-col justify-between">
+                            <p class="text-gray-700 italic mb-4">
+                                "Un lugar hermoso, con vistas increíbles, ideal para desconectar y relajarte en un entorno natural. Sus dueños súper amables y están en todos los detalles 🥰"
+                            </p>
+                            <div class="flex items-center justify-center">
+                                <img src="/public/img/melina_resena.png" alt="Google Review" class="w-12 h-12 rounded-full object-cover mr-4">
+                                <div>
+                                    <p class="font-bold text-gray-800">Melina Urrutia </p>
+                                    <p class="text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
+                                </div>
+                            </div>
+                            <a href="http://bit.ly/4heYfKp" class="text-[#BA7F47] hover:text-[#8b5e33] mt-4 inline-block">Ver más en Google</a>
+                        </div>
                     </div>
-                </div>
+                       
+                    
                 <!-- Botones de navegación -->
-                <button id="reviewsPrevButton"
-                    class="absolute top-1/2 left-0 transform -translate-y-1/2 text-[#BA7F47] text-4xl hover:text-[#a66c3e] transition-colors">
-                    &#8592;</button>
-                <button id="reviewsNextButton"
-                    class="absolute top-1/2 right-0 transform -translate-y-1/2 text-[#BA7F47] text-4xl hover:text-[#a66c3e] transition-colors">
-                    &#8594;</button>
-            </div>
+                <button id="reviewsPrevButton" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-2 shadow-lg">
+                    <!-- Ícono previo -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#BA7F47]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                
+                <button id="reviewsNextButton" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-2 shadow-lg">
+                    <!-- Ícono siguiente -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#BA7F47]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
         </div>
     </section>
         <!-- Contacto y Mapa -->
