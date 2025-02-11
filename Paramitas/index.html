@@ -25,7 +25,7 @@
             font-style: normal;
         }
     </style>
-    <script src="script.js"></script>
+    <script src="src/script.js"></script>
 </head>
 
 <body class="bg-[#F6F3EF] text-gray-800 font-noir-pro">
@@ -33,7 +33,9 @@
      <!-- Header: Responsive Navigation -->
      <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between py-4 px-4">
-            <img src="/public/img/logo.png" alt="Paramitas" class="h-10 mb-4 sm:mb-0">
+            <a href="#" class="flex items-center">
+                <img src="/public/img/logo.png" alt="Paramitas" class="h-10 mb-4 sm:mb-0">
+            </a>
             <nav class="flex flex-wrap justify-center space-x-0 sm:space-x-4">
                 <a href="#cabanas" class="text-[#BA7F47] font-semibold text-sm sm:text-lg px-2 sm:px-0 hover:underline">Cabañas</a>
                 <a href="#nosotros" class="text-gray-700 text-sm sm:text-lg px-2 sm:px-0 hover:underline">Nosotros</a>
@@ -61,7 +63,7 @@
     
         <!-- Contenido -->
         <div class="container mx-auto px-8 py-16 relative">
-            <div class="text-left text-[#B3907A] max-w-md">
+            <div class="text-left text-[#F5F5EB] max-w-md">
                 <h1 class="text-5xl font-extrabold mb-4 leading-tight">
                     Sentí la energía<br>de la montaña
                 </h1>
@@ -78,7 +80,7 @@
         <div class="bg-[#F6F3EF] py-12 px-6">
             <div class="max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
               <section class="text-center sm:text-left w-[90%] mx-auto">
-                <h2 class="text-3xl sm:text-4xl font-semibold text-[#CDA96C] mb-6 tracking-widest uppercase font-noir-pro">
+                <h2 class="text-3xl sm:text-4xl font-bold text-[#CDA96C] mb-6 tracking-widest uppercase font-noir-pro">
                   ¿Para qué Paramitas?
                 </h2>
                 <p class="text-[#8A6954] text-lg sm:text-xl leading-relaxed mb-4 font-noir-pro">
@@ -86,11 +88,11 @@
                   “virtudes para liberarse del sufrimiento”.
                 </p>
                 <p class="text-[#8A6954] text-lg sm:text-xl leading-relaxed mb-4 font-noir-pro">
-                  Generosidad, Conducta, Paciencia, Esfuerzo, Meditación y Sabiduría dan 
+                  Generosidad, Conducta, Paciencia, Entusiasmo, Meditación y Sabiduría dan 
                   nombre a nuestras cabañas y reflejan el espíritu con el que creamos este lugar.
                 </p>
                 <p class="text-[#8A6954] text-xl font-bold font-noir-pro">
-                  un espacio de paz, <br class="hidden sm:block"/> 
+                  Un espacio de paz, <br class="hidden sm:block"/> 
                   armonía y renovación.
                 </p>
               </section>
@@ -108,7 +110,7 @@
           
           <section id="cabanas" class="bg-white py-16">
             <div class="container mx-auto px-6 text-center">
-              <h2 class="text-4xl  text-[#CDA96C] mb-12 tracking-wide font-noir-pro">Nuestras cabañas</h2>
+              <h2 class="text-4xl  font-bold text-[#CDA96C] mb-12 tracking-wide font-noir-pro">Nuestras cabañas</h2>
               <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-left items-center">
                 <!-- Ítem 1 -->
 <div class="flex items-center space-x-4">
@@ -147,7 +149,7 @@
   </div>
   <!-- Ítem 6 -->
   <div class="flex items-center space-x-4">
-    <img src="/public/img/SERVICIOS/estacionamiento.png" alt="Baños privados" class="w-10 h-10">
+    <img src="/public/img/SERVICIOS/banos.png" alt="Baños privados" class="w-10 h-10">
     <p class="text-[#734E32] text-sm">
       <strong>BAÑOS</strong> <span class="font-normal">PRIVADOS</span>
     </p>
@@ -172,7 +174,7 @@
 
             </div>   
                     <!-- Carrusel de Cards -->
-                    <div class="relative px-4 sm:px-6 lg:px-10 mt-8">
+                    <div class="relative px-4 sm:px-6 lg:px-10 mt-8 ">
                         <!-- Contenedor de carrusel con overflow-x-auto -->
                         <div class="overflow-x-auto flex snap-x snap-mandatory scrollbar-hide">
                             <!-- Contenedor de las cards con espacio entre ellas -->
@@ -187,7 +189,8 @@
                                             alt="Cabaña Entusiasmo" class="w-full h-64 object-cover h-48 sm:h-64">
                                         <div class="p-6">
                                             <h3 class="text-sm sm:text-base font-semibold text-[#BA7F47]">Cabaña Entusiasmo</h3>
-                                            <p class="text-gray-600 mt-1 text-sm sm:text-base">Disfruta de la calma y el paisaje.</p>
+                                            <h4 class="text-sm sm:text-base font-light text-[#BA7F47]">Hasta 8 personas</h4>
+                                            <p class="text-gray-600 mt-1 text-sm sm:text-base">Como el sol, brilla con constancia y alegría.</p>
 
                                         </div>
                                     </div>
@@ -198,11 +201,12 @@
                                     class="card w-[300px] flex-shrink-0">
                                     <div class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-1000 ease-in-out hover:scale-105 hover:shadow-2xl"
                                         id="carousel">
-                                        <img src="/public/img/Meditacion/meditacion (1).jpg"
+                                        <img src="/public/img/Meditacion/meditacion (3).jpg"
                                             alt="Cabaña Meditación" class="w-full h-64 object-cover h-48 sm:h-64">
                                         <div class="p-6">
                                             <h3 class="text-sm sm:text-base font-semibold text-[#BA7F47]">Cabaña Meditación</h3>
-                                            <p class="text-gray-600 mt-1 text-sm sm:text-base">Perfecta para desconectarte.</p>
+                                            <h4 class="text-sm sm:text-base font-light text-[#BA7F47]">Hasta 6 personas</h4>
+                                            <p class="text-gray-600 mt-1 text-sm sm:text-base">Como un lago sereno, refleja la claridad.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -216,7 +220,8 @@
                                             alt="Cabaña Paciencia" class="w-full h-64 object-cover h-48 sm:h-64">
                                         <div class="p-6">
                                             <h3 class="text-sm sm:text-base font-semibold text-[#BA7F47]">Cabaña Paciencia</h3>
-                                            <p class="text-gray-600 mt-1 text-sm sm:text-base">Ideal para familias.</p>
+                                            <h4 class="text-sm sm:text-base font-light text-[#BA7F47]">Hasta 4 personas</h4>
+                                            <p class="text-gray-600 mt-1 text-sm sm:text-base">Como una montaña, permanece firme ante el viento.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -226,11 +231,12 @@
                                     class="card w-[300px] flex-shrink-0">
                                     <div class="bg-[#F6F3EF] rounded-lg overflow-hidden shadow-lg transform transition duration-1000 ease-in-out hover:scale-105 hover:shadow-2xl"
                                         id="carousel">
-                                        <img src="/public/img/Sabiduria/sabiduria (2).jpg"
+                                        <img src="/public/img/Sabiduria/sabiduria (3).jpg"
                                             alt="Cabaña Sabiduría" class="w-full h-64 object-cover h-48 sm:h-64">
                                         <div class="p-6">
                                             <h3 class="text-sm sm:text-base font-semibold text-[#BA7F47]">Cabaña Sabiduría</h3>
-                                            <p class="text-gray-600 mt-1 text-sm sm:text-base">Perfecta para desconectarte.</p>
+                                            <h4 class="text-sm sm:text-base font-light text-[#BA7F47]">Hasta 6 personas</h4>
+                                            <p class="text-gray-600 mt-1 text-sm sm:text-base">Como la luz de la luna, ilumina la verdadera esencia.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -244,7 +250,8 @@
                                             alt="Cabaña Conducta" class="w-full h-64 object-cover h-48 sm:h-64">
                                         <div class="p-6">
                                             <h3 class="text-sm sm:text-base font-semibold text-[#BA7F47]">Cabaña Conducta</h3>
-                                            <p class="text-gray-600 mt-1 text-sm sm:text-base">Escapada perfecta a la naturaleza.</p>
+                                            <h4 class="text-sm sm:text-base font-light text-[#BA7F47]">Hasta 4 personas</h4>
+                                            <p class="text-gray-600 mt-1 text-sm sm:text-base">Como un árbol firme, mantén tus raíces éticas.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -257,7 +264,8 @@
                                             alt="Cabaña Generosidad" class="w-full h-64 object-cover h-48 sm:h-64">
                                         <div class="p-6">
                                             <h3 class="text-sm sm:text-base font-semibold text-[#BA7F47]">Cabaña Generosidad</h3>
-                                            <p class="text-gray-600 mt-1 text-sm sm:text-base">Escapada perfecta a la naturaleza.</p>
+                                            <h4 class="text-sm sm:text-base font-light text-[#BA7F47]">Hasta 4 personas</h4>
+                                            <p class="text-gray-600 mt-1 text-sm sm:text-base">Como un río que fluye, comparte libremente.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -292,10 +300,11 @@
                         </div>
                     </section>
                     
+                    <section id="nosotros">
                     <div class="lg:col-span-1 mb-6 lg:mb-0">
-                        <div class="bg-white p-4 sm:p-6 rounded-lg shadow-lg flex flex-col items-center">
+                        <div class="bg-white p-4 sm:p-6 rounded-lg shadow-lg flex flex-col items-center mt-12">
                             <!-- Título -->
-                            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#BA7F47] mb-4 sm:mb-6 text-center">
+                            <h2 class=" text-2xl sm:text-3xl lg:text-4xl font-bold text-[#BA7F47] mb-4 sm:mb-6 text-center">
                                 Paramitas, nuestro lugar soñado
                             </h2>
                             <!-- Descripción -->
@@ -315,15 +324,15 @@
                       
                       
                           <!-- Imágenes -->
-                          <div class="space-y-4 hidden lg:block"> <!-- Ocultar imágenes en móvil -->
-                            <img src="/public/img/NOSOTROS 1.png" alt="Nuestro lugar soñado 1" class="rounded-lg shadow-lg w-full object-cover h-[200px]">
-                            <img src="/public/img/NOSOTROS 2.png" alt="Nuestro lugar soñado 2" class="rounded-lg shadow-lg w-full object-cover h-[200px]">
-                            <img src="/public/img/NOSOTROS 3.png" alt="Nuestro lugar soñado 3" class="rounded-lg shadow-lg w-full object-cover h-[200px]">
+                          <div class="space-y-4 hidden lg:block mb-20"> <!-- Ocultar imágenes en móvil -->
+                            <img src="/public/img/Nosotros (1).png" alt= "Nuestro lugar soñado 1" class="rounded-lg shadow-lg w-full object-cover h-[200px]">
+                            <img src="/public/img/Nosotros (2).png" alt="Nuestro lugar soñado 2" class="rounded-lg shadow-lg w-full object-cover h-[200px]">
+                            <img src="/public/img/Nosotros (3).png" alt="Nuestro lugar soñado 3" class="rounded-lg shadow-lg w-full object-cover h-[200px]">
                           </div>
                       
                           <!-- Imagen para móvil -->
                           <div class="lg:hidden"> <!-- Solo mostrar en móvil -->
-                            <img src="/public/img/NOSOTROS 3.png" alt="Nuestro lugar soñado 1" class="rounded-lg shadow-lg w-full object-cover h-[200px]">
+                            <img src="/public/img/NosotrosResponsive.png" alt="Nuestro lugar soñado 1" class="rounded-lg shadow-lg w-full object-cover h-[200px]">
                           </div>
                         </div>
                       </section>
@@ -332,11 +341,12 @@
      <section id="huespedes" class="bg-[#D9B177] py-16">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold text-white mb-8">Nuestros huéspedes</h2>
+    
+            <!-- Contenedor del carrusel -->
             <div class="relative">
-                <!-- Contenedor del carrusel -->
-                <div class="overflow-hidden" id="reviewsCarousel">
-                    <!-- Contenedor de las cards -->
-                    <div class="flex gap-8 transition-transform duration-500 ease-in-out items-stretch">
+                <div id="reviewsCarousel" class="overflow-x-auto scroll-smooth flex snap-x snap-mandatory scrollbar-hide px-6">
+                    <!-- Cards de testimonios -->
+                    <div class="flex gap-8 items-stretch">
                         <!-- Ejemplo de Testimonio -->
                         <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 max-w-[250px] sm:max-w-[300px] flex flex-col justify-between">
                             <p class="text-gray-700 italic mb-4">
@@ -476,14 +486,29 @@
                     <h2 class="text-3xl font-bold text-[#BA7F47] mb-6">Contactanos</h2>
                     <ul class="space-y-4 text-gray-700">
                         <li class="flex items-center">
-                            <span>+54 9 3496 41 8252</span>
+                            <a href="https://wa.me/5493496418252?text=Hola%20Carol,%20me%20interesa%20reservar%20una%20cabaña." 
+                               target="_blank" 
+                               class="text-[#BA7F47] hover:underline">
+                                +54 9 3496 41 8252 - Carol
+                            </a>
+                        </li>
+                        
+                        <li class="flex items-center">
+                            <a href="https://wa.me/5493496522687?text=Hola%20Edgardo,%20me%20interesa%20reservar%20una%20cabaña." 
+                               target="_blank" 
+                               class="text-[#BA7F47] hover:underline">
+                                +54 9 3496 52-2687 - Edgardo
+                            </a>
                         </li>
                         <li class="flex items-center">
                             <span>paramitasuspallata@gmail.com</span>
                         </li>
                         <li class="flex items-center">
-                            <span>Uspallata, provincia de Mendoza, Argentina</span>
+                            <a href="https://maps.app.goo.gl/hgci24PQxyB3Tm3j6" target="_blank" class="text-[#BA7F47] hover:underline">
+                                Uspallata, provincia de Mendoza, Argentina
+                            </a>
                         </li>
+                        
                     </ul>
                     <!-- Redes Sociales -->
                     <div class="flex space-x-4 mt-6">
@@ -526,10 +551,11 @@
 
     <!-- Footer -->
     <footer class="bg-[#BA7F47] text-white py-8">
-        <div class="container mx-auto flex flex-wrap justify-between items-center px-6">
-            <p>&copy; 2024 Paramitas Cabañas de Montaña. Todos los derechos reservados. Hecho con amor por MACA</p>
+        <div class="container mx-auto flex justify-center items-center px-6">
+            <p class="text-center">&copy; 2024 Paramitas Cabañas de Montaña. Todos los derechos reservados. Hecho con amor por MACA</p>
         </div>
     </footer>
+    
 
 <!-- Modal -->
 <div id="photoModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
